@@ -58,38 +58,38 @@ class YouDaoData {
     if (map == null) return null;
     YouDaoData data = YouDaoData();
     data.head = []
-      ..addAll((map['head'] as List ?? []).map((o) => BannerBean.fromMap(o)!));
+      ..addAll((map['head'] as List).map((o) => BannerBean.fromMap(o)!));
     data.discover = []
       ..addAll(
-          (map['discover'] as List ?? []).map((o) => DiscoverBean.fromMap(o)!));
+          (map['discover'] as List).map((o) => DiscoverBean.fromMap(o)!));
     data.tagRecommends = []
-      ..addAll((map['tagRecommends'] as List ?? [])
+      ..addAll((map['tagRecommends'] as List)
           .map((o) => int.tryParse(o.toString())!));
     data.popularCourse = []
-      ..addAll((map['popularCourse'] as List ?? [])
+      ..addAll((map['popularCourse'] as List)
           .map((o) => CoursesBean.fromMap(o)!));
     data.serial = map['serial'];
     data.essay = map['essay'];
     data.tagRecommendCourses = []
-      ..addAll((map['tagRecommendCourses'] as List ?? [])
+      ..addAll((map['tagRecommendCourses'] as List)
           .map((o) => TagRecommendCoursesBean.fromMap(o)!));
     data.fixedEntries = []
-      ..addAll((map['fixedEntries'] as List ?? [])
+      ..addAll((map['fixedEntries'] as List)
           .map((o) => FixedEntriesBean.fromMap(o)!));
 
     data.redirect = map['redirect'];
     data.subTag = []
-      ..addAll((map['subTag'] as List ?? []).map((o) => SubTagBean.fromMap(o)!));
+      ..addAll((map['subTag'] as List).map((o) => SubTagBean.fromMap(o)!));
     data.courses = []
       ..addAll(
-          (map['courses'] as List ?? []).map((o) => CoursesBean.fromMap(o)!));
+          (map['courses'] as List).map((o) => CoursesBean.fromMap(o)!));
     data.img = map['img'];
     data.subject = map['subject'];
     data.serialCourse = map['serialCourse'];
     data.column = []
-      ..addAll((map['column'] as List ?? []).map((o) => ColumnsBean.fromMap(o)!));
+      ..addAll((map['column'] as List).map((o) => ColumnsBean.fromMap(o)!));
     data.banner = []
-      ..addAll((map['banner'] as List ?? []).map((o) => BannerBean.fromMap(o)!));
+      ..addAll((map['banner'] as List).map((o) => BannerBean.fromMap(o)!));
     data.name = map['name'];
     data.tagType = map['tagType'];
     data.id = map['id'];
@@ -100,7 +100,7 @@ class YouDaoData {
 
     data.course = []
       ..addAll(
-          (map['course'] as List ?? []).map((o) => CoursesBean.fromMap(o)!));
+          (map['course'] as List).map((o) => CoursesBean.fromMap(o)!));
     return data;
   }
 }
@@ -194,7 +194,7 @@ class TagBean {
     tagBean.redirect = map['redirect'];
     tagBean.showSerialCourseNum = map['showSerialCourseNum'];
     tagBean.subTag = []
-      ..addAll((map['subTag'] as List ?? []).map((o) => SubTagBean.fromMap(o)!));
+      ..addAll((map['subTag'] as List).map((o) => SubTagBean.fromMap(o)!));
     tagBean.subject = map['subject'];
     tagBean.tagOnFire = map['tagOnFire'];
     tagBean.tagType = map['tagType'];
@@ -282,7 +282,7 @@ class TagRecommendCoursesBean {
     TagRecommendCoursesBean tagRecommendCoursesBean = TagRecommendCoursesBean();
     tagRecommendCoursesBean.courses = []
       ..addAll(
-          (map['courses'] as List ?? []).map((o) => CoursesBean.fromMap(o)!));
+          (map['courses'] as List).map((o) => CoursesBean.fromMap(o)!));
     tagRecommendCoursesBean.tagId = map['tagId'];
     tagRecommendCoursesBean.headImg = map['head_img'];
     tagRecommendCoursesBean.tag = TagBean.fromMap(map['tag']);
@@ -380,7 +380,7 @@ class CoursesBean {
     coursesBean.status = map['status'];
     coursesBean.url = map['url'];
     coursesBean.teacherList = []
-      ..addAll((map['teacherList'] as List ?? [])
+      ..addAll((map['teacherList'] as List)
           .map((o) => TeacherListBean.fromMap(o)!));
     return coursesBean;
   }
@@ -418,7 +418,7 @@ class RenewBean {
     if (map == null) return null;
     RenewBean renewBean = RenewBean();
     renewBean.renewCourses = []
-      ..addAll((map['renewCourses'] as List ?? [])
+      ..addAll((map['renewCourses'] as List)
           .map((o) => RenewCoursesBean.fromMap(o)!));
     renewBean.renewEnd = map['renewEnd'];
     renewBean.renewStart = map['renewStart'];
@@ -552,7 +552,7 @@ class ColumnsBean {
     if (map == null) return null;
     ColumnsBean columnBean = ColumnsBean();
     columnBean.courseCards = []
-      ..addAll((map['courseCards'] as List ?? [])
+      ..addAll((map['courseCards'] as List)
           .map((o) => CoursesBean.fromMap(o)!));
     columnBean.id = map['id'];
     columnBean.img = map['img'];

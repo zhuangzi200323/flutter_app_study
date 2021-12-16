@@ -83,7 +83,7 @@ class _SlideMenuItemDemoPageState extends State<SlideMenuItemDemoPage> {
     await rootBundle.loadString('assets/data/country.json').then((value) {
       countries = []
         ..addAll(
-            (json.decode(value) as List ?? []).map((o) => Country.fromMap(o)!));
+            (json.decode(value) as List).map((o) => Country.fromMap(o)!));
 
       if (countries.isNotEmpty) {
         keyList.clear();

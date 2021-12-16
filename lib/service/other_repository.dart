@@ -64,7 +64,7 @@ class OtherRepository {
       "format": format,
       "nat": nat,
     });
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return null;
     }
     Result result = Result.fromMap(json.decode(response.data));
@@ -76,7 +76,7 @@ class OtherRepository {
   static Future<JuZiMi?> getJuZiMiDetails(int id, String type) async {
     Response? response = await HttpUtils()
         .request(ApiUrl.JUZIMI_DETAILS_URL, data: {"id": id, "type": type});
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return null;
     }
 
@@ -94,7 +94,7 @@ class OtherRepository {
   static Future<List<JuZiMi>> getJuZiMiListByType(String type, int page) async {
     Response? response = await HttpUtils()
         .request(ApiUrl.JUZIMI_LIST_URL, data: {"type": type, "page": page});
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
 
@@ -102,7 +102,7 @@ class OtherRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => JuZiMi.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => JuZiMi.fromMap(o)!));
     } else {
       return [];
     }
@@ -113,7 +113,7 @@ class OtherRepository {
   static Future<List<JuZiMi>> getJuZiMiListByTag(int id, int page) async {
     Response? response = await HttpUtils().request(ApiUrl.JUZIMI_TAG_LIST_URL,
         data: {"page": page, "tag_id": id});
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
 
@@ -121,7 +121,7 @@ class OtherRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => JuZiMi.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => JuZiMi.fromMap(o)!));
     } else {
       return [];
     }
@@ -139,7 +139,7 @@ class OtherRepository {
       "kn": 50,
       "cn": 0
     });
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
     Result? result = Result.fromMap(json.decode(response.data));
@@ -210,7 +210,7 @@ class OtherRepository {
   ///
   static Future<List<TiktokVideo>> getTiktokVideos() async {
     Response? response = await HttpUtils().request(ApiUrl.DY_VIDEOS, data: null);
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
@@ -218,7 +218,7 @@ class OtherRepository {
     if (result!.code == '0') {
       return []
         ..addAll(
-            (result.data as List ?? []).map((o) => TiktokVideo.fromMap(o)!));
+            (result.data as List).map((o) => TiktokVideo.fromMap(o)!));
     } else {
       return [];
     }

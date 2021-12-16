@@ -44,7 +44,7 @@ class _ReaderPageState extends State<ReaderPage>
 
   @override
   void dispose() {
-    _scrollController?.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 

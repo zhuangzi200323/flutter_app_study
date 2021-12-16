@@ -6,7 +6,7 @@ class FoldingTicket extends StatefulWidget {
   static const double padding = 16.0;
   final bool isOpen;
   final List<FoldEntry> entries;
-  final Duration duration;
+  final Duration? duration;
 
   FoldingTicket({this.duration = Duration.zero, required this.entries, this.isOpen = false});
 

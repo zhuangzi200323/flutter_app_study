@@ -10,7 +10,7 @@ import '../../page_index.dart';
 class MusicModel extends ChangeNotifier {
   late AudioPlayer _audioPlayer;
 
-  late PlayerState _curState;
+  PlayerState _curState = PlayerState.STOPPED;
 
   List<Song> _songs = [];
 
@@ -325,7 +325,7 @@ class MusicModel extends ChangeNotifier {
   @override
   void dispose() {
     _stop();
-    _audioPlayer?.dispose();
+    _audioPlayer.dispose();
     super.dispose();
   }
 

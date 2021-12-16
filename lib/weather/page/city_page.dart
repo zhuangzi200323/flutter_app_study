@@ -1,7 +1,7 @@
 import 'package:azlistview/azlistview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bean/city.dart';
-import 'package:rounded_letter/rounded_letter.dart';
+// import 'package:rounded_letter/rounded_letter.dart';
 
 import '../../page_index.dart';
 
@@ -84,11 +84,12 @@ class CityPageState extends State<CityPage> {
           child: SuspensionTag(susTag: susTag, susHeight: _suspensionHeight)),
       SizedBox(
           height: _itemHeight.toDouble(),
-          child: ListTile(
-              title: Text(model.location!),
-              leading:
-                  RoundedLetter.withRandomColors(model.location![0], 40, 20),
-              onTap: () => Navigator.of(context).pop(model.location)))
+          // child: ListTile(
+          //     title: Text(model.location!),
+          //     leading:
+          //         RoundedLetter.withRandomColors(model.location![0], 40, 20),
+          //     onTap: () => Navigator.of(context).pop(model.location))
+      )
     ]);
   }
 }

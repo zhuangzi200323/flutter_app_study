@@ -85,7 +85,7 @@ class SlideMenuItemState extends State<SlideMenuItem>
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 
@@ -173,7 +173,7 @@ class SlideMenuItemState extends State<SlideMenuItem>
   }
 
   Widget buildActionButton(
-      Widget icon, Color color, Function onTap, Widget child) {
+      Widget icon, Color color, Function onTap, Widget? child) {
     return GestureDetector(
         behavior: HitTestBehavior.translucent,
         onTap: () {

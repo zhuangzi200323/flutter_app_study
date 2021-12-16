@@ -23,8 +23,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
-    _controller1?.dispose();
-    _controller2?.dispose();
+    _controller1.dispose();
+    _controller2.dispose();
     super.dispose();
   }
 

@@ -34,13 +34,13 @@ class _SunriseSunsetViewState extends State<SunriseSunsetView>
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(painter: _SunriseSunsetPainter(_controller?.value ?? 0));
+    return CustomPaint(painter: _SunriseSunsetPainter(_controller.value));
   }
 }
 

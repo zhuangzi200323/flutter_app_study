@@ -30,8 +30,8 @@ class CircleProgressWidget extends StatefulWidget {
       this.colors,
       this.duration: 1000,
       this.strokeWidth: 10.0,
-      this.topLabel = "",
-      this.bottomLabel = "",
+      this.topLabel = "2",
+      this.bottomLabel = "1",
       this.label: '',
       this.labelFontSize = 30.0,
       this.labelColor,
@@ -67,7 +67,7 @@ class _CircleProgressWidgetState extends State<CircleProgressWidget>
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -91,7 +91,7 @@ class _CircleProgressWidgetState extends State<CircleProgressWidget>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text('${widget.topLabel ?? '2'}',
+                Text('${widget.topLabel}',
                     style: TextStyle(
                         color: widget.topLabelColor ?? Colors.white,
                         fontSize: 14.0)),
@@ -104,7 +104,7 @@ class _CircleProgressWidgetState extends State<CircleProgressWidget>
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                    '${widget.label ?? (_controller.value * 100).toStringAsFixed(0)}',
+                    '${widget.label}',
                     style: TextStyle(
                         color: widget.labelColor ?? Colors.white,
                         fontSize: widget.labelFontSize)),
@@ -127,7 +127,7 @@ class _CircleProgressWidgetState extends State<CircleProgressWidget>
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 SizedBox(height: 10),
-                Text('${widget.bottomLabel ?? '1'}',
+                Text('${widget.bottomLabel}',
                     style: TextStyle(
                         color: widget.bottomLabelColor ?? Colors.white,
                         fontSize: 14.0))

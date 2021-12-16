@@ -54,7 +54,7 @@ class DashOffset {
   /// `percentage` will be clamped between 0.0 and 1.0; null will be converted
   /// to 0.0.
   DashOffset.percentage(double percentage)
-      : _rawVal = percentage.clamp(0.0, 1.0) ?? 0.0,
+      : _rawVal = percentage.clamp(0.0, 1.0),
         _dashOffsetType = _DashOffsetType.Percentage;
 
   /// Create a DashOffset that will be measured in terms of absolute pixels

@@ -4,7 +4,7 @@ class TagView extends StatelessWidget {
   final String tag;
   final Color? textColor;
   final Color? borderColor;
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
   final Color? bgColor;
   final VoidCallback? onPressed;
   final double borderRadius;

@@ -29,7 +29,7 @@ class TeamInfoPage extends StatelessWidget {
               Expanded(
                   child: Container(
                     child: Text(
-                      '${team?.city}',
+                      '${team.city}',
                       style: TextStyles.textDark16,
                     ),
                     height: 30.0,
@@ -54,7 +54,7 @@ class TeamInfoPage extends StatelessWidget {
               Expanded(
                   child: Container(
                     child: Text(
-                      '${team?.venue}',
+                      '${team.venue}',
                       style: TextStyles.textDark16,
                     ),
                     height: 30.0,
@@ -79,7 +79,7 @@ class TeamInfoPage extends StatelessWidget {
               Expanded(
                   child: Container(
                     child: Text(
-                      '${team?.coach}',
+                      '${team.coach}',
                       style: TextStyles.textDark16,
                     ),
                     height: 30.0,
@@ -104,7 +104,7 @@ class TeamInfoPage extends StatelessWidget {
               Expanded(
                   child: Container(
                     child: Text(
-                      '${team?.joinNBADate}年',
+                      '${team.joinNBADate}年',
                       style: TextStyles.textDark16,
                     ),
                     height: 30.0,
@@ -129,7 +129,7 @@ class TeamInfoPage extends StatelessWidget {
               Expanded(
                   child: Container(
                     child: Text(
-                      '${team?.area}',
+                      '${team.area}',
                       style: TextStyles.textDark16,
                     ),
                     height: 30.0,
@@ -154,7 +154,7 @@ class TeamInfoPage extends StatelessWidget {
               Expanded(
                   child: Container(
                     child: Text(
-                      'NO.${team?.serial}',
+                      'NO.${team.serial}',
                       style: TextStyles.textDark16,
                     ),
                     height: 30.0,
@@ -179,7 +179,7 @@ class TeamInfoPage extends StatelessWidget {
               Expanded(
                   child: Container(
                     child: Text(
-                      '${team?.brief}',
+                      '${team.brief}',
                       style: TextStyles.textDark16,
                     ),
                     alignment: Alignment.centerLeft,

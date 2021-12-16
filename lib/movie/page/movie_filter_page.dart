@@ -78,8 +78,8 @@ class _MovieFilterPageState extends State<MovieFilterPage> {
 
   @override
   void dispose() {
-    _scrollController?.dispose();
-    _dropdownMenuController?.dispose();
+    _scrollController.dispose();
+    _dropdownMenuController.dispose();
     super.dispose();
   }
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../page_index.dart';
 
@@ -50,31 +50,32 @@ class _CtripHomePageState extends State<CtripHomePage> {
               /// Banner
               Container(
                   height: headerHeight,
-                  child: Swiper(
-                      itemCount: bannerList.length,
-                      autoplay: true,
-                      pagination: SwiperCustomPagination(builder:
-                          (BuildContext context, SwiperPluginConfig config) {
-                        return Container(
-                            alignment: Alignment.bottomRight,
-                            padding: EdgeInsets.only(bottom: 20, right: 5),
-                            child: DotsIndicator(
-                                dotsCount: bannerList.length,
-                                position: config.activeIndex,
-                                reversed: false,
-                                decorator: DotsDecorator(
-                                    size: const Size.square(5.0),
-                                    activeSize: const Size(15.0, 5.0),
-                                    activeShape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(5.0)))));
-                      }),
-                      itemBuilder: (BuildContext context, int index) =>
-                          GestureDetector(
-                              onTap: () => pushNewPage(context,
-                                  WebViewPage(url: bannerList[index]['url']!)),
-                              child:
-                                  ImageLoadView(bannerList[index]['icon']!)))),
+                  // child: Swiper(
+                  //     itemCount: bannerList.length,
+                  //     autoplay: true,
+                  //     pagination: SwiperCustomPagination(builder:
+                  //         (BuildContext context, SwiperPluginConfig config) {
+                  //       return Container(
+                  //           alignment: Alignment.bottomRight,
+                  //           padding: EdgeInsets.only(bottom: 20, right: 5),
+                  //           child: DotsIndicator(
+                  //               dotsCount: bannerList.length,
+                  //               position: config.activeIndex,
+                  //               reversed: false,
+                  //               decorator: DotsDecorator(
+                  //                   size: const Size.square(5.0),
+                  //                   activeSize: const Size(15.0, 5.0),
+                  //                   activeShape: RoundedRectangleBorder(
+                  //                       borderRadius:
+                  //                           BorderRadius.circular(5.0)))));
+                  //     }),
+                  //     itemBuilder: (BuildContext context, int index) =>
+                  //         GestureDetector(
+                  //             onTap: () => pushNewPage(context,
+                  //                 WebViewPage(url: bannerList[index]['url']!)),
+                  //             child:
+                  //                 ImageLoadView(bannerList[index]['icon']!)))
+              ),
 
               /// localNavList
               Transform.translate(

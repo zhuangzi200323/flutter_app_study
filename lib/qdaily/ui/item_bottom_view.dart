@@ -10,20 +10,20 @@ class ItemBottomView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Row(children: <Widget>[
-        Text('${post?.category?.title}',
+        Text('${post.category?.title}',
             style: TextStyle(color: Colors.grey, fontSize: 12)),
         SizedBox(width: 5),
         Image.asset('images/qdaily/icon_toolbar_comment.png',
             width: 15, height: 15, color: Colors.grey),
-        Text('${post?.commentCount}',
+        Text('${post.commentCount}',
             style: TextStyle(color: Colors.grey, fontSize: 12)),
         SizedBox(width: 5),
         Image.asset('images/qdaily/icon_toolbar_like_unpressed.png',
             width: 15, height: 15, color: Colors.grey),
-        Text('${post?.praiseCount}',
+        Text('${post.praiseCount}',
             style: TextStyle(color: Colors.grey, fontSize: 12)),
         Spacer(),
-        Text("${post?.publishTime}",
+        Text("${post.publishTime}",
             style: TextStyle(color: Colors.grey, fontSize: 12))
       ]),
     );

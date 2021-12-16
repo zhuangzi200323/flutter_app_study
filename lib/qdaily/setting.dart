@@ -52,8 +52,8 @@ class _SettingPageState extends State<SettingMenuPage>
 
   @override
   void dispose() {
-    _tbController?.dispose();
-    _lrController?.dispose();
+    _tbController.dispose();
+    _lrController.dispose();
     super.dispose();
   }
 

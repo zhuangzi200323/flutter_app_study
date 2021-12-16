@@ -21,7 +21,7 @@ class ItemComment extends StatelessWidget {
                 GestureDetector(
                   behavior: HitTestBehavior.translucent,
                   onTap: () {
-                    Toast.show(context, '@${comment?.author?.name}');
+                    Toast.show(context, '@${comment.author?.name}');
                   },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,

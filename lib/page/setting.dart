@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_jd_address_selector/flutter_jd_address_selector.dart';
+// import 'package:flutter_jd_address_selector/flutter_jd_address_selector.dart';
 
 import '../generated/l10n.dart';
 import '../store/index.dart';
@@ -18,7 +18,7 @@ class SettingPage extends StatefulWidget {
 class _SettingPageState extends State<SettingPage> {
   Color? _pickerColor;
 
-  String address = "";
+  String? address;
 
   @override
   Widget build(BuildContext context) {
@@ -151,14 +151,15 @@ class _SettingPageState extends State<SettingPage> {
     showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
-          return JDAddressDialog(
-              onSelected: (province, city, county) {
-                setState(() {
-                  address = '$province$city$county';
-                  Toast.show(context, '$province-$city-$county');
-                });
-              },
-              title: '${S.of(context).choice_address}');
+          return Container();
+          // return JDAddressDialog(
+          //     onSelected: (province, city, county) {
+          //       setState(() {
+          //         address = '$province$city$county';
+          //         Toast.show(context, '$province-$city-$county');
+          //       });
+          //     },
+          //     title: '${S.of(context).choice_address}');
         });
   }
 

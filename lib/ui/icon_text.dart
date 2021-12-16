@@ -24,7 +24,7 @@ class IconText extends StatelessWidget {
       child: InkWell(
         onTap: onPressed,
         child: Container(
-          width: width ?? 88.0,
+          width: width,
           height: height,
           padding: EdgeInsets.symmetric(vertical: 8.0),
           child: Column(

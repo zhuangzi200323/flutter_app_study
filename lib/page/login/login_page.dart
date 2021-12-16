@@ -56,8 +56,8 @@ class _LoginPageState extends State<PasswordLoginPage> {
 
   @override
   void dispose() {
-    _phoneController?.dispose();
-    _passwordController?.dispose();
+    _phoneController.dispose();
+    _passwordController.dispose();
     super.dispose();
   }
 

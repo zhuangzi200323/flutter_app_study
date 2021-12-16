@@ -279,7 +279,7 @@ class FileUtil {
   }
 
   /// 将Uint8List写入本地文件
-  Future<String> writeByteToFile(Uint8List bytes, {String fileName = ""}) async {
+  Future<String> writeByteToFile(Uint8List bytes, {String? fileName}) async {
     File? file = await getPathFile(
         fileName ?? "${DateTime.now().millisecondsSinceEpoch}.png");
 

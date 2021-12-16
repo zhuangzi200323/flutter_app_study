@@ -12,8 +12,8 @@ import '../page_index.dart';
 Future<Null> showDiffDialog(BuildContext context,
     {Widget? title,
     Widget? content,
-    String yesText = "",
-    String noText = "",
+    String? yesText = "",
+    String? noText = "",
     EdgeInsetsGeometry titlePadding = EdgeInsets.zero,
     EdgeInsetsGeometry contentPadding = const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 24.0),
     Function()? pressed,
@@ -28,7 +28,7 @@ Future<Null> showDiffDialog(BuildContext context,
               contentPadding: contentPadding,
               actions: <Widget>[
                   FlatButton(
-                    onPressed: cancelPressed! ?? () => Navigator.pop(context),
+                    onPressed: cancelPressed ?? () => Navigator.pop(context),
                     child: Text(noText ??= S.of(context).cancel),
                   ),
                   FlatButton(onPressed: () => pressed!(), child: Text(yesText ??= S.of(context).sure))

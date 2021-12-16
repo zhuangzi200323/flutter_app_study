@@ -21,11 +21,11 @@ class Result {
     result.start = map['start'];
     result.total = map['total'];
     result.contacts = []
-      ..addAll((map['results'] as List ?? []).map((o) => ContactBean.fromMap(o)!));
+      ..addAll((map['results'] as List).map((o) => ContactBean.fromMap(o)!));
 
     result.heWeather = []
       ..addAll(
-          (map['HeWeather6'] as List ?? []).map((o) => HeWeather.fromMap(o)));
+          (map['HeWeather6'] as List).map((o) => HeWeather.fromMap(o)));
 
     result.images =
         map['list'] == null ? [] : ImageModal.fromMapList(map['list']);

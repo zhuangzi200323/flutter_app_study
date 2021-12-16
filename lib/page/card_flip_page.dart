@@ -68,7 +68,7 @@ class _CardFlipper extends State<CardFlipper> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    finishScrollController?.dispose();
+    finishScrollController.dispose();
     super.dispose();
   }
 

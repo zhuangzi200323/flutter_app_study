@@ -9,7 +9,7 @@ class GradualChangeView extends StatelessWidget {
   final double height;
   final Rotation rotation;
   final Widget? child;
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
   final AlignmentGeometry alignment;
 
   // 包括三个状态：clamp 为默认方式，自动延伸；repeated 重复效果;mirror 镜面效果，即对称效果

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../../page_index.dart';
 import '../index.dart';
@@ -81,36 +81,36 @@ class _StoreBooksPageState extends State<StoreBooksPage>
                                 pushNewPage(context, PicturePage())),
                       )
                     ])),
-                Container(
-                    padding: EdgeInsets.all(10),
-                    child: Swiper(
-                        autoplay: widget.banners!.length > 1,
-                        itemBuilder: (_, index) =>
-                            ImageLoadView(widget.banners![index].cover!),
-                        itemCount: widget.banners!.length,
-                        onTap: (index) => pushNewPage(
-                            context,
-                            BookDetailsPage(
-                                id: widget.banners![index].id!,
-                                imageUrl: widget.banners![index].cover!)),
-                        pagination: SwiperCustomPagination(
-                            builder: (BuildContext context,
-                                    SwiperPluginConfig config) =>
-                                Container(
-                                    alignment: Alignment.bottomCenter,
-                                    child: DotsIndicator(
-                                        dotsCount: widget.banners!.length,
-                                        position: config.activeIndex,
-                                        reversed: false,
-                                        decorator: DotsDecorator(
-                                            activeColor: readerMainColor,
-                                            size: const Size.square(5.0),
-                                            activeSize: const Size(10.0, 5.0),
-                                            activeShape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        2.5))))))),
-                    height: (Utils.width - 20) / 69 * 28 + 20),
+                // Container(
+                //     padding: EdgeInsets.all(10),
+                //     child: Swiper(
+                //         autoplay: widget.banners!.length > 1,
+                //         itemBuilder: (_, index) =>
+                //             ImageLoadView(widget.banners![index].cover!),
+                //         itemCount: widget.banners!.length,
+                //         onTap: (index) => pushNewPage(
+                //             context,
+                //             BookDetailsPage(
+                //                 id: widget.banners![index].id!,
+                //                 imageUrl: widget.banners![index].cover!)),
+                //         pagination: SwiperCustomPagination(
+                //             builder: (BuildContext context,
+                //                     SwiperPluginConfig config) =>
+                //                 Container(
+                //                     alignment: Alignment.bottomCenter,
+                //                     child: DotsIndicator(
+                //                         dotsCount: widget.banners!.length,
+                //                         position: config.activeIndex,
+                //                         reversed: false,
+                //                         decorator: DotsDecorator(
+                //                             activeColor: readerMainColor,
+                //                             size: const Size.square(5.0),
+                //                             activeSize: const Size(10.0, 5.0),
+                //                             activeShape: RoundedRectangleBorder(
+                //                                 borderRadius:
+                //                                     BorderRadius.circular(
+                //                                         2.5))))))),
+                //     height: (Utils.width - 20) / 69 * 28 + 20),
                 ListView.separated(
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,

@@ -6,7 +6,7 @@ class EmptyPage extends StatelessWidget {
   final String text;
   final String imageAsset;
   final Function()? onPresses;
-  final String pressText;
+  final String? pressText;
 
   EmptyPage(
       {Key? key,

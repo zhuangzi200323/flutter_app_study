@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../page_index.dart';
 import 'index.dart';
@@ -111,12 +111,12 @@ class _QDailySplashPageState extends State<QDailySplashPage>
               }),
 
           /// 引导页
-          Offstage(
-              offstage: !(isFirst && showGuidePages),
-              child: Swiper(
-                  loop: false,
-                  itemCount: guideList.length,
-                  itemBuilder: (context, index) => _bannerList[index]))
+          // Offstage(
+          //     offstage: !(isFirst && showGuidePages),
+          //     child: Swiper(
+          //         loop: false,
+          //         itemCount: guideList.length,
+          //         itemBuilder: (context, index) => _bannerList[index]))
         ]));
   }
 

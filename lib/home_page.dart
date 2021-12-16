@@ -109,7 +109,8 @@ class HomeStatePage extends State<HomePage> {
                                   Icon(Icons.keyboard_arrow_down)
                                 ], mainAxisSize: MainAxisSize.min),
                                 Text(
-                                    '${provider.defaultWeather!.now!.condTxt ?? ''} ${provider.defaultWeather!.now!.tmp ?? ''}',
+                                    '${provider.defaultWeather == null || provider.defaultWeather!.now == null ? "" : provider.defaultWeather!.now!.condTxt}'
+                                        ' ${provider.defaultWeather == null || provider.defaultWeather!.now == null ? "" : provider.defaultWeather!.now!.tmp}',
                                     style: TextStyle(fontSize: 13.0))
                               ],
                               crossAxisAlignment: CrossAxisAlignment.start,

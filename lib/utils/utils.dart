@@ -196,7 +196,7 @@ class Utils {
   /// 时间转字符串
   ///
   static String duration2String(Duration duration) {
-    return duration.toString().split('.').first ?? '0:00:00';
+    return duration.toString().split('.').first;// ?? '0:00:00';
   }
 
   /// 16进制颜色值转换为10进制值
@@ -284,7 +284,7 @@ class Utils {
   /// return 186****2581
   ///
   static String formatMobile(String mobile) {
-    if (mobile == null || mobile.length != 11) return (mobile ?? "");
+    if (mobile == null || mobile.length != 11) return (mobile);
     Pattern regex = RegExp(r'(1\w{2})(\w{4})(\w{4})');
     return mobile.replaceAllMapped(regex, (match) => '${match[1]}****${match[3]}');
   }

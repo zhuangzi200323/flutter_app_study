@@ -19,10 +19,13 @@ class ContactListHeader extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ClipOval(
-              child: Image.network(
-                'https://github.com/huextrat/TheGorgeousLogin/blob/master/assets/img/login_logo.png?raw=true',
+              child: Image.asset('images/login_logo.png',
                 width: 80.0,
               ),
+              // child: Image.network(
+              //   'https://github.com/huextrat/TheGorgeousLogin/blob/master/assets/img/login_logo.png?raw=true',
+              //   width: 80.0,
+              // ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),

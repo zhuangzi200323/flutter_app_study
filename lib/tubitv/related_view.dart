@@ -37,7 +37,7 @@ class RelatedView extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (_, index) => ItemMovie(
                         title: likes[index].title!,
-                        image: likes[index].posterarts!.first!,
+                        image: likes[index].posterarts!.first,
                         onTap: () => pushNewPage(
                             context, DetailsPage(id: likes[index].id!)),
                       ),

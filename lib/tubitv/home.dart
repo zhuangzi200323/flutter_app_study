@@ -3,7 +3,7 @@ import 'package:flutter_app/bean/tubitv.dart';
 import 'package:flutter_app/stream_packing/index.dart';
 import 'search.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../page_index.dart';
 import 'details.dart';
@@ -61,31 +61,31 @@ class _TubiTVHomePageState extends State<TubiTVHomePage> {
                   pinned: true,
                   expandedHeight: Utils.width * 0.6,
                   flexibleSpace: FlexibleSpaceBar(
-                    background: Swiper(
-                        itemBuilder: (context, index) => InkWell(
-                              onTap: () => pushNewPage(
-                                  context, DetailsPage(id: banners[index].id!)),
-                              child: Stack(children: <Widget>[
-                                ImageLoadView(
-                                    banners[index].backgrounds!.first),
-                                Positioned(
-                                  child: Container(
-                                    padding: EdgeInsets.all(8.0),
-                                    color: Color(0x3a000000),
-                                    child: Text(
-                                      '${banners[index].title}',
-                                      style: TextStyles.textWhite16,
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                  left: 0,
-                                  bottom: 0,
-                                  right: 0,
-                                )
-                              ], fit: StackFit.expand),
-                            ),
-                        itemCount: banners.length,
-                        autoplay: true),
+                    // background: Swiper(
+                    //     itemBuilder: (context, index) => InkWell(
+                    //           onTap: () => pushNewPage(
+                    //               context, DetailsPage(id: banners[index].id!)),
+                    //           child: Stack(children: <Widget>[
+                    //             ImageLoadView(
+                    //                 banners[index].backgrounds!.first),
+                    //             Positioned(
+                    //               child: Container(
+                    //                 padding: EdgeInsets.all(8.0),
+                    //                 color: Color(0x3a000000),
+                    //                 child: Text(
+                    //                   '${banners[index].title}',
+                    //                   style: TextStyles.textWhite16,
+                    //                   textAlign: TextAlign.start,
+                    //                 ),
+                    //               ),
+                    //               left: 0,
+                    //               bottom: 0,
+                    //               right: 0,
+                    //             )
+                    //           ], fit: StackFit.expand),
+                    //         ),
+                    //     itemCount: banners.length,
+                    //     autoplay: true),
                   ),
                 ),
                 SliverFixedExtentList(

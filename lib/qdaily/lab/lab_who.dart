@@ -40,7 +40,7 @@ class _LabWhoPageState extends State<LabWhoPage>
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 

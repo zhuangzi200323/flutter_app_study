@@ -247,7 +247,7 @@ class MyVerticalDragGestureRecognizer extends VerticalDragGestureRecognizer {
   void didStopTrackingLastPointer(int pointer) {
     final double minVelocity = minFlingVelocity ?? kMinFlingVelocity;
     final double minDistance = minFlingDistance ?? kTouchSlop;
-    final VelocityTracker? tracker = _velocityTrackers![pointer];
+    final VelocityTracker? tracker = _velocityTrackers[pointer];
 
     ///VelocityEstimate 计算二维速度的
     final VelocityEstimate? estimate = tracker!.getVelocityEstimate();

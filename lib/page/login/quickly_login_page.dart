@@ -48,8 +48,8 @@ class _QuicklyLoginPageState extends State<QuicklyLoginPage> {
 
   @override
   void dispose() {
-    _phoneController?.dispose();
-    _vCodeController?.dispose();
+    _phoneController.dispose();
+    _vCodeController.dispose();
     super.dispose();
   }
 

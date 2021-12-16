@@ -14,7 +14,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   /// 是否第一次打开APP
   bool firstOpen = false;
 
-  late Hitokoto data;
+  Hitokoto? data;
 
   @override
   void initState() {
@@ -48,7 +48,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                 padding: EdgeInsets.all(20),
                 alignment: Alignment.centerLeft,
                 width: double.infinity,
-                child: Text('${data.hitokoto ?? ""}',
+                child: Text('${data == null || data!.hitokoto == null ? "" : data!.hitokoto}',
                     style: TextStyle(
                         color: Colors.redAccent,
                         fontSize: 16,
@@ -59,7 +59,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                 alignment: Alignment.centerRight,
                 width: double.infinity,
                 child:
-                    Text('--${data.from ?? ""}', style: TextStyles.textGrey14))
+                    Text('--${data == null || data!.from == null ? "" : data!.from}', style: TextStyles.textGrey14))
           ]),
           left: 0,
           right: 0,

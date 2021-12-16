@@ -41,7 +41,7 @@ class AirView extends StatelessWidget {
             child: Row(children: <Widget>[
               Icon(CustomIcon.pm25, color: Colors.white, size: 20.0),
               SizedBox(width: 5.0),
-              Text('  ${air?.pm10} μg/m3',
+              Text('  ${air.pm10} μg/m3',
                   style: TextStyle(color: Colors.white))
             ]),
           )
@@ -52,14 +52,14 @@ class AirView extends StatelessWidget {
             child: Row(children: <Widget>[
               Icon(CustomIcon.o3, color: Colors.white, size: 20.0),
               SizedBox(width: 5.0),
-              Text('  ${air?.o3} μg/m3', style: TextStyle(color: Colors.white))
+              Text('  ${air.o3} μg/m3', style: TextStyle(color: Colors.white))
             ]),
           ),
           Expanded(
             child: Row(children: <Widget>[
               Icon(CustomIcon.so2, color: Colors.white, size: 20.0),
               SizedBox(width: 5.0),
-              Text('  ${air?.so2} μg/m3', style: TextStyle(color: Colors.white))
+              Text('  ${air.so2} μg/m3', style: TextStyle(color: Colors.white))
             ]),
           )
         ]),
@@ -70,7 +70,7 @@ class AirView extends StatelessWidget {
               children: <Widget>[
                 Icon(CustomIcon.co, color: Colors.white, size: 20.0),
                 SizedBox(width: 5.0),
-                Text('  ${air?.co} mg/m3',
+                Text('  ${air.co} mg/m3',
                     style: TextStyle(color: Colors.white))
               ],
             ),
@@ -79,7 +79,7 @@ class AirView extends StatelessWidget {
             child: Row(children: <Widget>[
               Icon(CustomIcon.no2, color: Colors.white, size: 20.0),
               SizedBox(width: 5.0),
-              Text('  ${air?.no2} μg/m3', style: TextStyle(color: Colors.white))
+              Text('  ${air.no2} μg/m3', style: TextStyle(color: Colors.white))
             ]),
           )
         ]),

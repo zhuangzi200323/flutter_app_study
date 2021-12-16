@@ -31,7 +31,7 @@ class CodeInputText extends StatefulWidget {
       this.callBack,
       this.keyboardType: KeyboardType.none,
       this.obscureText: false,
-      this.radius = 0.0})
+      this.radius = 10.0})
       : assert(length >= 4 && length <= 6),
         super(key: key);
 
@@ -77,7 +77,7 @@ class _CodeInputTextState extends State<CodeInputText> {
                 ? _controller.text.substring(i - 1, i)
                 : '',
             obscureText: widget.obscureText,
-            radius: widget.radius ?? 10.0));
+            radius: widget.radius));
       }
     } else if (widget.type == CodeInputType.squareBox) {
       for (int i = 1; i <= widget.length; i++) {
@@ -207,7 +207,7 @@ class _SquareInputCellState extends State<SquareInputCell> {
               ? widget.text == ''
                   ? SizedBox()
                   : Icon(Icons.brightness_1, size: 20)
-              : Text(widget.text ?? '', style: TextStyle(fontSize: 22)),
+              : Text(widget.text, style: TextStyle(fontSize: 22)),
       alignment: Alignment.center,
     );
   }
@@ -237,7 +237,7 @@ class UnderlineInputCell extends StatelessWidget {
                   width: 2))),
       child: obscureText
           ? text == '' ? SizedBox() : Icon(Icons.brightness_1, size: 20)
-          : Text(text ?? '', style: TextStyle(fontSize: 22)),
+          : Text(text, style: TextStyle(fontSize: 22)),
       alignment: Alignment.center,
     );
   }
@@ -265,7 +265,7 @@ class CircleInputCell extends StatelessWidget {
               width: 1.5)),
       child: obscureText
           ? text == '' ? SizedBox() : Icon(Icons.brightness_1, size: 20)
-          : Text(text ?? '', style: TextStyle(fontSize: 22)),
+          : Text(text, style: TextStyle(fontSize: 22)),
       alignment: Alignment.center,
     );
   }

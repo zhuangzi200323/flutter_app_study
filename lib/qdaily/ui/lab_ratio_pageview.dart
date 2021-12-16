@@ -36,8 +36,8 @@ class _LabRatioPageViewState extends State<LabRatioPageView>
 
   @override
   void dispose() {
-    _controller?.dispose();
-    animationController?.dispose();
+    _controller.dispose();
+    animationController.dispose();
     super.dispose();
   }
 
@@ -61,12 +61,12 @@ class _LabRatioPageViewState extends State<LabRatioPageView>
             itemBuilder: (_, index) {
               animation1 = IntTween(
                       begin: 0,
-                      end: widget.questions![index]?.options?.first?.percent)
+                      end: widget.questions![index].options?.first.percent)
                   .animate(animationController);
               animation2 = animationController.drive(IntTween(
                   begin: 0,
                   end:
-                      widget.questions![index]?.options?.elementAt(1)?.percent));
+                      widget.questions![index].options?.elementAt(1).percent));
 
               animationController.addListener(() => setState(() {}));
 

@@ -10,7 +10,7 @@ class RadialSeekBarUI extends StatelessWidget {
 
   final Animation<double>? animation;
 
-  final String imageUrl;
+  final String? imageUrl;
 
   RadialSeekBarUI(
       {Key? key,

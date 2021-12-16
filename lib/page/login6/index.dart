@@ -40,8 +40,8 @@ class _OnboardingPageState extends State<OnboardingPage>
 
   @override
   void dispose() {
-    animationController?.dispose();
-    _pageController?.dispose();
+    animationController.dispose();
+    _pageController.dispose();
     super.dispose();
   }
 

@@ -36,7 +36,7 @@ class _ItemAddressState extends State<ItemAddress>
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 

@@ -13,10 +13,10 @@ class ImageLoadView extends StatelessWidget {
   final double radius;
 
   /// 宽
-  final double width;
+  final double? width;
 
   /// 高
-  final double height;
+  final double? height;
 
   /// 填充效果
   final BoxFit fit;

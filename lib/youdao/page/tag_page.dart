@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyrefresh/ball_pulse_footer.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../../page_index.dart';
 import '../index.dart';
@@ -57,19 +57,20 @@ class _TagPageState extends State<TagPage> {
           children: <Widget>[
             Container(
                 height: Utils.width * 36 / 118,
-                child: Swiper(
-                    itemBuilder: (context, index) =>
-                        ImageLoadView(banners[index].img!),
-                    itemCount: banners.length,
-                    autoplay: true,
-                    viewportFraction: 0.8,
-                    scale: 0.9,
-                    pagination: SwiperPagination(),
-                    onTap: (index) => pushNewPage(
-                        context,
-                        WebViewPage(
-                            url: banners[index].url!,
-                            title: '${banners[index].title}')))),
+                // child: Swiper(
+                //     itemBuilder: (context, index) =>
+                //         ImageLoadView(banners[index].img!),
+                //     itemCount: banners.length,
+                //     autoplay: true,
+                //     viewportFraction: 0.8,
+                //     scale: 0.9,
+                //     pagination: SwiperPagination(),
+                //     onTap: (index) => pushNewPage(
+                //         context,
+                //         WebViewPage(
+                //             url: banners[index].url!,
+                //             title: '${banners[index].title}')))
+            ),
             Gaps.vGap5,
             Container(
               child: SizedBox(height: 90.0,

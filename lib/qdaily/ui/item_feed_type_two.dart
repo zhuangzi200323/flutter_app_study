@@ -6,7 +6,7 @@ import '../index.dart';
 class ItemFeedTypeTwo extends StatelessWidget {
   final VoidCallback? onTap;
   final FeedsBean feedsBean;
-  final double width;
+  final double? width;
 
   ItemFeedTypeTwo({Key? key, this.onTap, required this.feedsBean, this.width = 0.0})
       : super(key: key);

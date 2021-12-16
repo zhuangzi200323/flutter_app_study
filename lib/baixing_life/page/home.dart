@@ -3,7 +3,7 @@ import 'package:flutter_app/store/index.dart';
 
 import 'package:flutter_easyrefresh/ball_pulse_footer.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../../page_index.dart';
 import '../index.dart';
@@ -103,14 +103,15 @@ class _HomePageState extends State<HomePage>
         expandedHeight: headerHeight,
         title: Text('${widget.title}'),
         flexibleSpace: Container(
-            child: Swiper(
-                autoplay: true,
-                itemCount: slides.length,
-                itemBuilder: (BuildContext context, int index) => ImageLoadView(
-                    '${slides[index].comPic}',
-                    height: headerHeight),
-                onTap: (int index) =>
-                    pushNewPage(context, DetailsPage(slides[index].goodsId!)))));
+            // child: Swiper(
+            //     autoplay: true,
+            //     itemCount: slides.length,
+            //     itemBuilder: (BuildContext context, int index) => ImageLoadView(
+            //         '${slides[index].comPic}',
+            //         height: headerHeight),
+            //     onTap: (int index) =>
+            //         pushNewPage(context, DetailsPage(slides[index].goodsId!)))
+        ));
   }
 
   Widget _buildSliverGridCategory(List<GoodsCategory> category) {

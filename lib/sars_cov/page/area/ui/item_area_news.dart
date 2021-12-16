@@ -56,7 +56,7 @@ class ItemAreaNewsView extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       Text(
-                        '${news?.cTime}',
+                        '${news.cTime}',
                         style: TextStyle(fontSize: 15, color: Colors.black54),
                       ),
                       Offstage(
@@ -94,11 +94,11 @@ class ItemAreaNewsView extends StatelessWidget {
                                   child: Column(
                                     children: [
                                       Text(
-                                        '${news?.title}',
+                                        '${news.title}',
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                       ),
-                                      Text('\n来源：${news?.media}'),
+                                      Text('\n来源：${news.media}'),
                                     ],
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -107,12 +107,12 @@ class ItemAreaNewsView extends StatelessWidget {
                               ),
                               Visibility(
                                 child: ImageLoadView(
-                                  '${news?.thumb}',
+                                  '${news.thumb}',
                                   width: 100,
                                   height: 94,
                                   fit: BoxFit.cover,
                                 ),
-                                visible: news?.thumb != "",
+                                visible: news.thumb != "",
                               ),
                             ],
                           ),

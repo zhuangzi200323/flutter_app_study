@@ -7,7 +7,7 @@ class MovieRepository {
   static Future<MovieHomeData?> getMovieHomeData({String city = ""}) async {
     Response? response =
         await HttpUtils().request(ApiUrl.MOVIE_HOME_URL, data: {'city': city});
-    if (response == null || response?.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return null;
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
@@ -34,7 +34,7 @@ class MovieRepository {
 
     Response? response =
         await HttpUtils().request(ApiUrl.MOVIE_RANGE_URL, data: {'year': year});
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return null;
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
@@ -61,7 +61,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Movie.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Movie.fromMap(o)));
     } else {
       return [];
     }
@@ -79,7 +79,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Movie.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Movie.fromMap(o)));
     } else {
       return [];
     }
@@ -96,7 +96,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Movie.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Movie.fromMap(o)));
     } else {
       return [];
     }
@@ -114,7 +114,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Movie.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Movie.fromMap(o)));
     } else {
       return [];
     }
@@ -126,14 +126,14 @@ class MovieRepository {
     Response? response = await HttpUtils().request(
         ApiUrl.MOVIE_SEARCH_BY_TAG_URL,
         data: {'tag': tag, 'page': page, 'limit': limit, 'type': type});
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Movie.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Movie.fromMap(o)));
     } else {
       return [];
     }
@@ -164,14 +164,14 @@ class MovieRepository {
       "type": type,
       "feature": feature
     });
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Movie.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Movie.fromMap(o)));
     } else {
       return [];
     }
@@ -181,7 +181,7 @@ class MovieRepository {
   static Future<Movie?> getMovieDetail(String id) async {
     Response? response =
         await HttpUtils().request(ApiUrl.MOVIE_DETAIL_URL, data: {'id': id});
-    if (response == null || response!.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return null;
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
@@ -219,7 +219,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Photos.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Photos.fromMap(o)));
     } else {
       return [];
     }
@@ -238,7 +238,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Movie.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Movie.fromMap(o)));
     } else {
       return [];
     }
@@ -256,7 +256,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Reviews.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Reviews.fromMap(o)));
     } else {
       return [];
     }
@@ -274,7 +274,7 @@ class MovieRepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Reviews.fromMap(o)));
+        ..addAll((result.data as List).map((o) => Reviews.fromMap(o)));
     } else {
       return [];
     }
@@ -286,7 +286,7 @@ class MovieRepository {
       {String deviceId = "", String platform = ""}) async {
     Response? response = await HttpUtils().request(ApiUrl.TUBITV_HOME,
         data: {'platform': platform, 'device_id': deviceId});
-    if (response == null || response?.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
@@ -294,7 +294,7 @@ class MovieRepository {
     if (result!.code == '0') {
       return []
         ..addAll(
-            (result.data as List ?? []).map((o) => TubiCategory.fromMap(o)!));
+            (result.data as List).map((o) => TubiCategory.fromMap(o)!));
     } else {
       return [];
     }
@@ -306,14 +306,14 @@ class MovieRepository {
       {int limit = 0, int page = 0, String category = ""}) async {
     Response? response = await HttpUtils().request(ApiUrl.TUBITV_LIST,
         data: {'page': page, 'category': category, 'limit': limit});
-    if (response == null || response?.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => TuBiTV.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => TuBiTV.fromMap(o)!));
     } else {
       return [];
     }
@@ -325,14 +325,14 @@ class MovieRepository {
       {String deviceId = "", String platform = "", String key = ""}) async {
     Response? response = await HttpUtils().request(ApiUrl.TUBITV_SEARCH,
         data: {'platform': platform, 'device_id': deviceId, 'key': key});
-    if (response == null || response?.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return [];
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => TuBiTV.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => TuBiTV.fromMap(o)!));
     } else {
       return [];
     }
@@ -344,7 +344,7 @@ class MovieRepository {
       {String deviceId = "", String platform = "", String id = ""}) async {
     Response? response = await HttpUtils().request(ApiUrl.TUBITV_DETAIL,
         data: {'platform': platform, 'device_id': deviceId, 'id': id});
-    if (response == null || response?.statusCode != 200) {
+    if (response == null || response.statusCode != 200) {
       return null;
     }
     BaseResult? result = BaseResult.fromMap(json.decode(response.data));

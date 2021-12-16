@@ -59,13 +59,13 @@ class ResponseBean {
     responseBean.praiseCount = map['praise_count'];
     responseBean.lastKey = '${map['last_key']}';
     responseBean.feeds = []
-      ..addAll((map['feeds'] as List ?? []).map((o) => FeedsBean.fromMap(o)!));
+      ..addAll((map['feeds'] as List).map((o) => FeedsBean.fromMap(o)!));
     responseBean.banners = []
       ..addAll(
-          (map['banners'] as List ?? []).map((o) => BannersBean.fromMap(o)!));
+          (map['banners'] as List).map((o) => BannersBean.fromMap(o)!));
     responseBean.columns = []
       ..addAll(
-          (map['columns'] as List ?? []).map((o) => ColumnBean.fromMap(o)!));
+          (map['columns'] as List).map((o) => ColumnBean.fromMap(o)!));
     responseBean.column =
         map['column'] == null ? null : ColumnBean.fromMap(map['column']);
     responseBean.share =
@@ -77,14 +77,14 @@ class ResponseBean {
         map['author'] == null ? null : AuthorBean.fromMap(map['author']);
 
     responseBean.options = []
-      ..addAll((map['options'] as List ?? []).map((o) => Option.fromMap(o)!));
+      ..addAll((map['options'] as List).map((o) => Option.fromMap(o)!));
 
     responseBean.question =
         map['question'] == null ? null : Question.fromMap(map['question']);
 
     responseBean.questions = []
       ..addAll(
-          (map['questions'] as List ?? []).map((o) => Question.fromMap(o)!));
+          (map['questions'] as List).map((o) => Question.fromMap(o)!));
     responseBean.genderQuestion = map['gender_question'] == null
         ? null
         : Question.fromMap(map['gender_question']);
@@ -94,15 +94,15 @@ class ResponseBean {
 
     responseBean.comments = []
       ..addAll(
-          (map['comments'] as List ?? []).map((o) => QDailyComment.fromMap(o)!));
+          (map['comments'] as List).map((o) => QDailyComment.fromMap(o)!));
 
     responseBean.topics = []
       ..addAll(
-          (map['paper_topics'] as List ?? []).map((o) => Topic.fromMap(o)!));
+          (map['paper_topics'] as List).map((o) => Topic.fromMap(o)!));
 
     responseBean.isRecord = map['is_record'];
     responseBean.everyoneAttitude = []
-      ..addAll((map['everyones_attitude'] as List ?? [])
+      ..addAll((map['everyones_attitude'] as List)
           .map((o) => Option.fromMap(o)!));
 
     responseBean.image = map['image'];
@@ -175,7 +175,7 @@ class Question {
     questionBean.backgroundPicUrl = map['background_pic_url'];
     questionBean.maxScore = map['max_score'];
     questionBean.options = []
-      ..addAll((map['options'] as List ?? []).map((o) => Option.fromMap(o)!));
+      ..addAll((map['options'] as List).map((o) => Option.fromMap(o)!));
     return questionBean;
   }
 }
@@ -253,7 +253,7 @@ class Topic {
     testBean.id = map['id'];
     testBean.insertLocation = map['insert_location'];
     testBean.insertContent = []
-      ..addAll((map['insert_content'] as List ?? [])
+      ..addAll((map['insert_content'] as List)
           .map((o) => InsertContent.fromMap(o)!));
     return testBean;
   }
@@ -322,7 +322,7 @@ class FeedsBean {
     feedsBean.dataType = map['datatype'];
     feedsBean.post = map['post'] == null ? null : PostBean.fromMap(map['post']);
     feedsBean.newsList = []
-      ..addAll((map['news_list'] as List ?? []).map((o) => NewList.fromMap(o)!));
+      ..addAll((map['news_list'] as List).map((o) => NewList.fromMap(o)!));
 
     feedsBean.author =
         map['author'] == null ? null : AuthorBean.fromMap(map['author']);
@@ -451,11 +451,11 @@ class PostBean {
 
     postBean.body = map['body'];
     postBean.js = []
-      ..addAll((map['js'] as List ?? []).map((o) => o.toString()));
+      ..addAll((map['js'] as List).map((o) => o.toString()));
     postBean.css = []
-      ..addAll((map['css'] as List ?? []).map((o) => o.toString()));
+      ..addAll((map['css'] as List).map((o) => o.toString()));
     postBean.infoImage = []
-      ..addAll((map['info_image'] as List ?? []).map((o) => o.toString()));
+      ..addAll((map['info_image'] as List).map((o) => o.toString()));
 
     return postBean;
   }
@@ -654,9 +654,9 @@ class ColumnBean {
         map['share'] == null ? null : ShareBean.fromMap(map['share']);
     column.authors = []
       ..addAll(
-          (map['authors'] as List ?? []).map((o) => AuthorBean.fromMap(o)));
+          (map['authors'] as List).map((o) => AuthorBean.fromMap(o)));
     column.subscribers = []
-      ..addAll((map['subscribers'] as List ?? [])
+      ..addAll((map['subscribers'] as List)
           .map((o) => SubscriberBean.fromMap(o)!));
     return column;
   }
@@ -791,7 +791,7 @@ class QDailyComment {
         ? null
         : AuthorBean.fromMap(map['parent_user']);
     commentBeanBean.childComments = []
-      ..addAll((map['child_comments'] as List ?? [])
+      ..addAll((map['child_comments'] as List)
           .map((o) => QDailyComment.fromMap(o)!));
     return commentBeanBean;
   }

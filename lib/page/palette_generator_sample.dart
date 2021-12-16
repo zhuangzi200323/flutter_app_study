@@ -110,7 +110,7 @@ class _ImageColorsState extends State<ImageColors> {
                         height: 170),
                     // This is the selection rectangle.
                     Positioned.fromRect(
-                        rect: dragRegion ?? region ?? Rect.zero,
+                        rect: dragRegion ?? region,
                         child: Container(
                           decoration: BoxDecoration(
                               color: _kSelectionRectangleBackground,

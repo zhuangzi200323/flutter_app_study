@@ -42,17 +42,17 @@ class JuZiMi {
     dataBean.desc = map['desc'];
     dataBean.readCount = map['read_count'];
     dataBean.tags = []
-      ..addAll((map['tags'] as List ?? []).map((o) => TagsBean.fromMap(o)!));
+      ..addAll((map['tags'] as List).map((o) => TagsBean.fromMap(o)!));
     dataBean.copyright = map['copyright'];
     dataBean.details = map['details'];
     dataBean.recommends = []
-      ..addAll((map['recommends'] as List ?? []).map((o) => JuZiMi.fromMap(o)!));
+      ..addAll((map['recommends'] as List).map((o) => JuZiMi.fromMap(o)!));
     dataBean.userLikeTags = []
-      ..addAll((map['user_like_tags'] as List ?? [])
+      ..addAll((map['user_like_tags'] as List)
           .map((o) => TagsBean.fromMap(o)!));
     dataBean.authorNews = []
       ..addAll(
-          (map['author_news'] as List ?? []).map((o) => JuZiMi.fromMap(o)!));
+          (map['author_news'] as List).map((o) => JuZiMi.fromMap(o)!));
     return dataBean;
   }
 

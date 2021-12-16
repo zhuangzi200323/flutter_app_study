@@ -142,7 +142,7 @@ class NBANews {
     bean.keywordsNew = map['keywords_new'];
     bean.mediaIcon = map['media_icon'];
     bean.multiImages = []
-      ..addAll((map['multi_imgs'] as List ?? []).map((o) => o.toString()));
+      ..addAll((map['multi_imgs'] as List).map((o) => o.toString()));
     bean.newsLevel = map['news_level'];
     bean.publishTime = map['publish_time'];
     bean.report = map['report'];
@@ -153,8 +153,8 @@ class NBANews {
     bean.sUrl = map['surl'];
     bean.tagCluster = map['tag_cluster'];
     bean.tagLabel = []
-      ..addAll((map['tag_label'] as List ?? []).map(
-          (o) => []..addAll((o as List ?? []).map((oo) => oo.toString()))));
+      ..addAll((map['tag_label'] as List).map(
+          (o) => []..addAll((o as List).map((oo) => oo.toString()))));
     bean.tags = map['tags'];
     bean.terms = map['terms'];
     bean.title = map['title'];

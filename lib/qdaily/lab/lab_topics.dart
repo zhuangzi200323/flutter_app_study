@@ -70,23 +70,23 @@ class _TopicLabsPageState extends State<TopicLabsPage> {
                           pushNewPage(context,
                               LabISayPage(tag: tag, post: feeds[index].post!));
                         }
-                        if (feeds[index]?.post?.category?.id == 3) {
+                        if (feeds[index].post?.category?.id == 3) {
                           // 焦点小组
                           // pushNewPage(context, LabISayPage(tag: tag, post: feed?.post));
                         }
-                        if (feeds[index]?.post?.category?.id == 4) {
+                        if (feeds[index].post?.category?.id == 4) {
                           // 42%
                           pushNewPage(context,
                               LabRatioPage(post: feeds[index].post!, tag: tag));
                         }
-                        if (feeds[index]?.post?.category?.id == 5) {
+                        if (feeds[index].post?.category?.id == 5) {
                           //你猜
                           pushNewPage(
                               context,
                               LabYouGuessPage(
                                   post: feeds[index].post!, tag: tag));
                         }
-                        if (feeds[index]?.post?.category?.id == 6) {
+                        if (feeds[index].post?.category?.id == 6) {
                           // 你谁啊
                           pushNewPage(context,
                               LabWhoPage(post: feeds[index].post!, tag: tag));

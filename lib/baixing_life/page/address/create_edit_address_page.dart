@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_jd_address_selector/flutter_jd_address_selector.dart';
+// import 'package:flutter_jd_address_selector/flutter_jd_address_selector.dart';
 
 import '../../../generated/l10n.dart';
 import '../../../store/index.dart';
@@ -111,12 +111,12 @@ class _CreateEditAddressPageState extends State<CreateEditAddressPage> {
 
   getAddressData(int id) async {
     await addressProvider!.getAddress(id).then((address) {
-      _tag = address!.tag ?? '';
-      _isDefault = address.isDefault ?? false;
+      _tag = address!.tag;
+      _isDefault = address.isDefault;
 
-      _province = address.province ?? '';
-      _city = address.city ?? '';
-      _county = address.county ?? '';
+      _province = address.province;
+      _city = address.city;
+      _county = address.county;
       area = "$_province" + " $_city" + " $_county";
       _addressController.text = address.address;
       _nameController.text = address.name;
@@ -241,18 +241,19 @@ class _CreateEditAddressPageState extends State<CreateEditAddressPage> {
     showModalBottomSheet(
         context: context,
         builder: (BuildContext context) {
-          return JDAddressDialog(
-              onSelected: (province, city, county) {
-                setState(() {
-                  _province = province;
-                  _city = city;
-                  _county = county;
-                  area = '$province $city $county';
-                  _verify();
-                });
-              },
-              title: '选择地区',
-              unselectedColor: grey3Color);
+          return Container();
+          // return JDAddressDialog(
+          //     onSelected: (province, city, county) {
+          //       setState(() {
+          //         _province = province;
+          //         _city = city;
+          //         _county = county;
+          //         area = '$province $city $county';
+          //         _verify();
+          //       });
+          //     },
+          //     title: '选择地区',
+          //     unselectedColor: grey3Color);
         });
   }
 
@@ -261,7 +262,7 @@ class _CreateEditAddressPageState extends State<CreateEditAddressPage> {
         id: widget.id,
         name: _nameController.text,
         phone: _phoneController.text,
-        zipCode: _zipCodeController.text ?? '',
+        zipCode: _zipCodeController.text,
         address: _addressController.text,
         tag: _tag,
         isDefault: _isDefault,

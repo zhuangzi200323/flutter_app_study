@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parallax_image/parallax_image.dart';
+// import 'package:parallax_image/parallax_image.dart';
 
 class ParallaxImageDemo extends StatelessWidget {
   @override
@@ -41,13 +41,13 @@ class ParallaxImageDemo extends StatelessWidget {
     if (index > 7) return Container();
     return Padding(
       padding: const EdgeInsets.only(bottom: 10.0),
-      child: ParallaxImage(
-        extent: 150.0,
-        image: NetworkImage(
-          'https://github.com/pulyaevskiy/parallax-image/blob/master/example/images/img$index.jpg?raw=true',
-        ),
-        child: Text('图片$index'),
-      ),
+      // child: ParallaxImage(
+      //   extent: 150.0,
+      //   image: NetworkImage(
+      //     'https://github.com/pulyaevskiy/parallax-image/blob/master/example/images/img$index.jpg?raw=true',
+      //   ),
+      //   child: Text('图片$index'),
+      // ),
     );
   }
 
@@ -56,12 +56,12 @@ class ParallaxImageDemo extends StatelessWidget {
     if (index > 7) return Container();
     return Padding(
       padding: const EdgeInsets.only(right: 10.0),
-      child: ParallaxImage(
-        extent: 100.0,
-        image: NetworkImage(
-          'https://github.com/pulyaevskiy/parallax-image/blob/master/example/images/img$index.jpg?raw=true',
-        ),
-      ),
+      // child: ParallaxImage(
+      //   extent: 100.0,
+      //   image: NetworkImage(
+      //     'https://github.com/pulyaevskiy/parallax-image/blob/master/example/images/img$index.jpg?raw=true',
+      //   ),
+      // ),
     );
   }
 }

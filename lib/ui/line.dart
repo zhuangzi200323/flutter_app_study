@@ -109,7 +109,7 @@ class LineWidget extends StatelessWidget {
 
   Widget _buildVerticalLine(context, color) {
     return Container(
-      height: height ?? 1.0,
+      height: height,
       width: width,
       color: color ?? Theme.of(context).dividerColor,
     );
@@ -118,7 +118,7 @@ class LineWidget extends StatelessWidget {
   Widget _buildHorizontalLine(context, color) {
     return Container(
       height: height,
-      width: width ?? 1.0,
+      width: width,
       color: color ?? Theme.of(context).dividerColor,
     );
   }

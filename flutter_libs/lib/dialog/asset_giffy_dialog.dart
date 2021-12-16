@@ -83,7 +83,7 @@ class AssetGiffyDialog extends StatelessWidget {
                         color: buttonOkColor ?? Colors.green,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(buttonRadius)),
-                        onPressed: onOkButtonPressed ?? () {},
+                        onPressed: onOkButtonPressed,
                         child: buttonOkText ??
                             Text('OK', style: TextStyle(color: Colors.white)),
                       ),

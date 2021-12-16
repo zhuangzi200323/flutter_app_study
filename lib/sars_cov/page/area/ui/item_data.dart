@@ -14,7 +14,7 @@ class ItemDataView extends StatelessWidget {
           Expanded(
             child: Container(
               child: Text(
-                '${city?.cityName}',
+                '${city.cityName}',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -25,7 +25,7 @@ class ItemDataView extends StatelessWidget {
           Expanded(
             child: Container(
               child: Text(
-                '${city?.confirmedCount}',
+                '${city.confirmedCount}',
                 style: TextStyle(color: Color(0xFFEE836C)),
               ),
               alignment: Alignment.center,
@@ -35,7 +35,7 @@ class ItemDataView extends StatelessWidget {
           Expanded(
             child: Container(
               child: Text(
-                '${city?.deadCount}',
+                '${city.deadCount}',
                 style: TextStyle(color: Color(0xFF164F81)),
               ),
               alignment: Alignment.center,
@@ -45,7 +45,7 @@ class ItemDataView extends StatelessWidget {
           Expanded(
             child: Container(
               child: Text(
-                '${city?.curedCount}',
+                '${city.curedCount}',
               ),
               alignment: Alignment.center,
               height: 20,

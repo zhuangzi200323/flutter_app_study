@@ -48,7 +48,7 @@ class _PhotoViewState extends State<PhotoView>
 
   @override
   void dispose() {
-    animationController?.dispose();
+    animationController.dispose();
     super.dispose();
   }
 
@@ -60,7 +60,7 @@ class _PhotoViewState extends State<PhotoView>
     return Scaffold(
       backgroundColor: Colors.black,
       body: GestureDetector(
-        onVerticalDragStart: (_) => animationController?.stop(),
+        onVerticalDragStart: (_) => animationController.stop(),
         onVerticalDragEnd: (_) {
           debugPrint('dy====================$dy');
           // 滑动截止时，根据 dy 判断是展开还是回缩
@@ -175,7 +175,7 @@ class _PhotoViewState extends State<PhotoView>
             AppBar(
                 elevation: 1.0,
                 backgroundColor: Colors.transparent,
-                title: Text('${widget.title ?? ""}'),
+                title: Text('${widget.title}'),
                 actions: <Widget>[
                   IconButton(
                       icon: Icon(Icons.share),

@@ -3,17 +3,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SpUtil {
   static SharedPreferences? _prefs;
 
-  static SpUtil? _instance;
+  static final SpUtil _instance = SpUtil._();
 
   static Future<SpUtil> getInstance() async {
-    if (_instance == null) {
-      _instance = await SpUtil._()._init();
+    if(_prefs == null) {
+      await _instance._init();
     }
-
-    return _instance!;
+    return _instance;
   }
 
   SpUtil._();
+
+  SpUtil._internal(){
+
+  }
 
   Future _init() async {
     _prefs = await SharedPreferences.getInstance();

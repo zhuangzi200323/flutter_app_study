@@ -24,12 +24,12 @@ class FriendsDynamic {
         map['video'] == null ? null : VideoBean.fromMap(map['video']);
     dynamic.images = []
       ..addAll(
-          (map['images'] as List ?? []).map((o) => ImagesListBean.fromMap(o)));
+          (map['images'] as List).map((o) => ImagesListBean.fromMap(o)));
     dynamic.comment = []
       ..addAll(
-          (map['comment'] as List ?? []).map((o) => CommentBean.fromMap(o)!));
+          (map['comment'] as List).map((o) => CommentBean.fromMap(o)!));
     dynamic.praise = []
-      ..addAll((map['praise'] as List ?? []).map((o) => o.toString()));
+      ..addAll((map['praise'] as List).map((o) => o.toString()));
     return dynamic;
   }
 

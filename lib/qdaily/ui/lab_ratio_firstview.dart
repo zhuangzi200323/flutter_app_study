@@ -78,7 +78,7 @@ class _LabRadioFirstViewState extends State<LabRadioFirstView> {
           Padding(
             padding: EdgeInsets.only(top: 15, bottom: 15),
             child: Text(
-              '${widget.slideQuestion?.content}',
+              '${widget.slideQuestion.content}',
               style: TextStyles.textDark16,
             ),
           ),
@@ -113,7 +113,7 @@ class _LabRadioFirstViewState extends State<LabRadioFirstView> {
                 child: Container(
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    '${widget.slideQuestion != null ? widget.slideQuestion.options!.first?.content : ""}',
+                    '${widget.slideQuestion != null ? widget.slideQuestion.options!.first.content : ""}',
                     style: TextStyles.textGrey14,
                   ),
                   decoration: BoxDecoration(

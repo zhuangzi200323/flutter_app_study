@@ -18,24 +18,24 @@ class Baixing {
     Baixing baixing = Baixing();
     baixing.reservationGoods = []
       ..addAll(
-          (map['reservationGoods'] as List ?? []).map((o) => Goods.fromMap(o)));
+          (map['reservationGoods'] as List).map((o) => Goods.fromMap(o)));
     baixing.advertesPicture = AdvertesPicture.fromMap(map['advertesPicture']);
     baixing.shopInfo = ShopInfo.fromMap(map['shopInfo']);
     baixing.toShareCode = AdvertesPicture.fromMap(map['toShareCode']);
     baixing.category = []
       ..addAll(
-          (map['category'] as List ?? []).map((o) => GoodsCategory.fromMap(o)!));
+          (map['category'] as List).map((o) => GoodsCategory.fromMap(o)!));
 
     baixing.recommend = []
-      ..addAll((map['recommend'] as List ?? []).map((o) => Goods.fromMap(o)));
+      ..addAll((map['recommend'] as List).map((o) => Goods.fromMap(o)));
     baixing.slides = []
-      ..addAll((map['slides'] as List ?? []).map((o) => Goods.fromMap(o)));
+      ..addAll((map['slides'] as List).map((o) => Goods.fromMap(o)));
 
     FloorBean floorBean1 = FloorBean();
     floorBean1.floorName = map['floorName']['floor1'];
     floorBean1.floorPic = AdvertesPicture.fromMap(map['floor1Pic']);
     floorBean1.floor = []
-      ..addAll((map['floor1'] as List ?? []).map((o) => Goods.fromMap(o)));
+      ..addAll((map['floor1'] as List).map((o) => Goods.fromMap(o)));
 
     print(floorBean1.toString());
 
@@ -43,7 +43,7 @@ class Baixing {
     floorBean2.floorName = map['floorName']['floor2'];
     floorBean2.floorPic = AdvertesPicture.fromMap(map['floor2Pic']);
     floorBean2.floor = []
-      ..addAll((map['floor2'] as List ?? []).map((o) => Goods.fromMap(o)));
+      ..addAll((map['floor2'] as List).map((o) => Goods.fromMap(o)));
 
     print(floorBean2.toString());
 
@@ -51,7 +51,7 @@ class Baixing {
     floorBean3.floorName = map['floorName']['floor3'];
     floorBean3.floorPic = AdvertesPicture.fromMap(map['floor3Pic']);
     floorBean3.floor = []
-      ..addAll((map['floor3'] as List ?? []).map((o) => Goods.fromMap(o)));
+      ..addAll((map['floor3'] as List).map((o) => Goods.fromMap(o)));
 
     print(floorBean3.toString());
 
@@ -125,7 +125,7 @@ class ShopInfo {
     shopInfo.shopImage = map['leaderImage'] ?? map['shopImage'] ?? "";
     shopInfo.leaderPhone = map['leaderPhone'];
     shopInfo.goodsList = []
-      ..addAll((map['goodsList'] as List ?? [])
+      ..addAll((map['goodsList'] as List)
           .map((o) => GoodsListBean.fromMap(o)!));
     shopInfo.activityInfo = map['activityInfo'] == null
         ? null
@@ -345,7 +345,7 @@ class GoodsInfo {
   static GoodsInfo fromMap(Map<String, dynamic> map) {
     GoodsInfo info = GoodsInfo();
     info.goodComments = []
-      ..addAll((map['goodComments'] as List ?? [])
+      ..addAll((map['goodComments'] as List)
           .map((o) => GoodComment.fromMap(o)));
 
     info.advertesPicture = map['advertesPicture'] == null
@@ -422,7 +422,7 @@ class GoodsCategory {
     categoryBean.mallCategoryId = map['mallCategoryId'];
     categoryBean.mallCategoryName = map['mallCategoryName'];
     categoryBean.bxMallSubDto = []
-      ..addAll((map['bxMallSubDto'] as List ?? [])
+      ..addAll((map['bxMallSubDto'] as List)
           .map((o) => GoodsCategory.fromMap(o)!));
     categoryBean.comments = map['comments'];
     categoryBean.image = map['image'];
@@ -494,7 +494,7 @@ class OrderBean {
     order.shopName = map['SHOP_NAME'];
     order.subOrder = []
       ..addAll(
-          (map['subOrder'] as List ?? []).map((o) => SubOrderBean.fromMap(o)!));
+          (map['subOrder'] as List).map((o) => SubOrderBean.fromMap(o)!));
     order.state = map['STATE'];
     order.settlementTime = map['SETTLEMENT_TIME'] == null
         ? ""

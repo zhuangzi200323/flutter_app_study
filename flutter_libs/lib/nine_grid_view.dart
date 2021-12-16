@@ -357,10 +357,7 @@ class _NineGridViewState extends State<NineGridView> {
 
   /// get big image size.
   Rect _getBigImgSize(double originalWidth, double originalHeight) {
-    double width = widget.width ??
-        (MediaQuery.of(context).size.width -
-            widget.margin.left -
-            widget.margin.right);
+    double width = widget.width;// ?? (MediaQuery.of(context).size.width - widget.margin.left - widget.margin.right);
     width = width - widget.padding.left - widget.padding.right;
     double itemW = (width - widget.space * 2) / 3;
 

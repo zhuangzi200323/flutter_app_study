@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bean/image.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../page_index.dart';
 
@@ -76,7 +76,7 @@ class _SliverPageState extends State<SliverPage>
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 
@@ -130,14 +130,15 @@ class _SliverPageState extends State<SliverPage>
                             /// 顶部banner部分
                             Container(
                                 height: bannerHeight,
-                                child: Swiper(
-                                    itemBuilder: (context, index) =>
-                                        ImageLoadView(bannerImages[index]),
-                                    itemCount: 4,
-                                    pagination: SwiperPagination(
-                                        builder: SwiperPagination.fraction,
-                                        alignment: Alignment.bottomRight),
-                                    autoplay: true)),
+                                // child: Swiper(
+                                //     itemBuilder: (context, index) =>
+                                //         ImageLoadView(bannerImages[index]),
+                                //     itemCount: 4,
+                                //     pagination: SwiperPagination(
+                                //         builder: SwiperPagination.fraction,
+                                //         alignment: Alignment.bottomRight),
+                                //     autoplay: true)
+                            ),
 
                             /// TabBar上面部分，（如果TabBar上面纵向有多个控件应尽可能多的将控件放到此处）
                             Container(

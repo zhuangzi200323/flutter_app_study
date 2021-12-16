@@ -13,7 +13,7 @@ class ProdCryptoRepository implements CryptoRepository {
             .request('/v1/ticker', data: {"limit": 50});
 
     final List responseBody = json.decode(response!.data);
-    final statusCode = response!.statusCode;
+    final statusCode = response.statusCode;
     if (statusCode != 200 || responseBody == null) {
       throw FetchDataException(
           "An error ocurred : [Status Code : $statusCode]");

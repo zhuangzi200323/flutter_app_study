@@ -158,9 +158,9 @@ class DragSortViewState extends State<DragSortView>
 
   @override
   void dispose() {
-    _controller?.dispose();
-    _zoomController?.dispose();
-    _floatController?.dispose();
+    _controller.dispose();
+    _zoomController.dispose();
+    _floatController.dispose();
     _removeOverlay();
     super.dispose();
   }
@@ -168,8 +168,7 @@ class DragSortViewState extends State<DragSortView>
   /// init child size and positions.
   void _init(BuildContext context, EdgeInsets padding, EdgeInsets margin) {
     double space = widget.space;
-    double width = widget.width ??
-        (MediaQuery.of(context).size.width - margin.left - margin.right);
+    double width = widget.width;// ?? (MediaQuery.of(context).size.width - margin.left - margin.right);
     width = width - padding.left - padding.right;
     _itemWidth = (width - space * 2) / 3;
     _positions.clear();

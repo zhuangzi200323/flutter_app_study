@@ -9,7 +9,7 @@ class RangesData {
     RangesData data = RangesData();
     data.cover = map['cover'] != null ? CoverBean.fromMap(map['cover']) : null;
     data.ranges = []
-      ..addAll((map['ranges'] as List ?? []).map((o) => RangesBean.fromMap(o)!));
+      ..addAll((map['ranges'] as List).map((o) => RangesBean.fromMap(o)!));
     return data;
   }
 
@@ -32,7 +32,7 @@ class RangesBean {
     rangesBean.info =
         map['info'] != null ? CoverBean.fromMap(map['info']) : null;
     rangesBean.subjects = []
-      ..addAll((map['subjects'] as List ?? []).map((o) => Movie.fromMap(o)));
+      ..addAll((map['subjects'] as List).map((o) => Movie.fromMap(o)));
     return rangesBean;
   }
 
@@ -110,15 +110,15 @@ class MovieHomeData {
     if (map == null) return null;
     MovieHomeData data = MovieHomeData();
     data.banners = []
-      ..addAll((map['banners'] as List ?? []).map((o) => MovieNews.fromMap(o)!));
+      ..addAll((map['banners'] as List).map((o) => MovieNews.fromMap(o)!));
     data.inTheaters = []
-      ..addAll((map['in_theaters'] as List ?? []).map((o) => Movie.fromMap(o)));
+      ..addAll((map['in_theaters'] as List).map((o) => Movie.fromMap(o)));
     data.soonMovies = []
-      ..addAll((map['soon_movies'] as List ?? []).map((o) => Movie.fromMap(o)));
+      ..addAll((map['soon_movies'] as List).map((o) => Movie.fromMap(o)));
     data.category = []
-      ..addAll((map['category'] as List ?? []).map((o) => MovieTag.fromMap(o)!));
+      ..addAll((map['category'] as List).map((o) => MovieTag.fromMap(o)!));
     data.ranges = []
-      ..addAll((map['ranges'] as List ?? []).map((o) => MovieTag.fromMap(o)!));
+      ..addAll((map['ranges'] as List).map((o) => MovieTag.fromMap(o)!));
     return data;
   }
 
@@ -147,7 +147,7 @@ class MovieTag {
     categoryBean.title = map['title'];
     categoryBean.hasMore = map['has_more'];
     categoryBean.subjects = []
-      ..addAll((map['subjects'] as List ?? []).map((o) => Movie.fromMap(o)));
+      ..addAll((map['subjects'] as List).map((o) => Movie.fromMap(o)));
     return categoryBean;
   }
 

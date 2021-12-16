@@ -16,9 +16,9 @@ class AvatarGlow extends StatefulWidget {
   AvatarGlow({
     required this.endRadius,
     required this.child,
-    this.duration = Duration.zero,
+    this.duration = const Duration(milliseconds: 2000),
     this.repeat = true,
-    this.repeatPauseDuration = Duration.zero,
+    this.repeatPauseDuration = const Duration(seconds: 100),
     this.showTwoGlows = true,
     this.glowColor,
     this.startDelay = Duration.zero,
@@ -39,7 +39,7 @@ class _AvatarGlowState extends State<AvatarGlow>
   void initState() {
     super.initState();
     controller = AnimationController(
-        duration: widget.duration ?? Duration(milliseconds: 2000), vsync: this);
+        duration: widget.duration, vsync: this);
     final Animation curve =
         CurvedAnimation(parent: controller, curve: Curves.decelerate);
     smallDiscAnimation = Tween(
@@ -58,7 +58,7 @@ class _AvatarGlowState extends State<AvatarGlow>
     controller.addStatusListener((_) async {
       if (controller.status == AnimationStatus.completed) {
         await Future.delayed(
-            widget.repeatPauseDuration ?? Duration(milliseconds: 100));
+            widget.repeatPauseDuration);
         if (mounted && widget.repeat) {
           controller.reset();
           controller.forward();
@@ -107,7 +107,7 @@ class _AvatarGlowState extends State<AvatarGlow>
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 }

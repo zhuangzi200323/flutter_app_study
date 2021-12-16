@@ -41,7 +41,7 @@ class _LabYouGuessPageState extends State<LabYouGuessPage>
   @override
   void dispose() {
     super.dispose();
-    _controller?.dispose();
+    _controller.dispose();
   }
 
   @override

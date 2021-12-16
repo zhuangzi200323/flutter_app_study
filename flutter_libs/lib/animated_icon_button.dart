@@ -244,7 +244,7 @@ class _AnimatedIconButtonState extends State<AnimatedIconButton>
   String? tooltip;
   BoxConstraints? constraints;
   VisualDensity? visualDensity;
-  EdgeInsets padding;
+  EdgeInsets? padding;
   Alignment? alignment;
   AnimationController? animationController;
   double splashRadius;
@@ -321,14 +321,14 @@ class _AnimatedIconButtonState extends State<AnimatedIconButton>
     return nowBackgroundColor == null
         ? buildIconButton()
         : CircleAvatar(
-            radius: size ?? 30,
+            radius: size,
             backgroundColor: nowBackgroundColor ?? Colors.transparent,
             child: buildIconButton());
   }
 
   IconButton buildIconButton() {
     return IconButton(
-        iconSize: size ?? 30,
+        iconSize: size,
         onPressed: hasCustomAnimationController
             ? onPressed
             : () {
@@ -352,8 +352,8 @@ class _AnimatedIconButtonState extends State<AnimatedIconButton>
         splashColor: splashColor,
         disabledColor: disabledColor,
         focusNode: focusNode,
-        autofocus: autofocus ?? false,
-        enableFeedback: enableFeedback ?? true,
+        autofocus: autofocus,
+        enableFeedback: enableFeedback,
         tooltip: tooltip,
         constraints: constraints,
         visualDensity: visualDensity,

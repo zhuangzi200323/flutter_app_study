@@ -41,7 +41,7 @@ class _RankingsPageState extends State<RankingsPage>
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 

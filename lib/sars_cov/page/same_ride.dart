@@ -58,7 +58,7 @@ class _SameRidePageState extends State<SameRidePage> {
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 
@@ -182,7 +182,7 @@ class _SameRidePageState extends State<SameRidePage> {
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(14.0))),
               elevation: 10.0,
-              color: list[index]?.bgColor,
+              color: list[index].bgColor,
               margin: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
               child: Container(
                 padding: EdgeInsets.all(10),
@@ -192,7 +192,7 @@ class _SameRidePageState extends State<SameRidePage> {
                       children: <Widget>[
                         Expanded(
                           child: Text(
-                            '${list[index]?.posStart}',
+                            '${list[index].posStart}',
                             textAlign: TextAlign.start,
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
@@ -203,7 +203,7 @@ class _SameRidePageState extends State<SameRidePage> {
                             child: Column(
                               children: [
                                 Text(
-                                  '${list[index]?.type}',
+                                  '${list[index].type}',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 18),
                                   maxLines: 1,
@@ -214,7 +214,7 @@ class _SameRidePageState extends State<SameRidePage> {
                                   fit: BoxFit.fitWidth,
                                 ),
                                 Text(
-                                  '${list[index]?.no}',
+                                  '${list[index].no}',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 18),
                                   maxLines: 1,
@@ -227,7 +227,7 @@ class _SameRidePageState extends State<SameRidePage> {
                         ),
                         Expanded(
                           child: Text(
-                            '${list[index]?.posEnd}',
+                            '${list[index].posEnd}',
                             textAlign: TextAlign.end,
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
@@ -242,13 +242,13 @@ class _SameRidePageState extends State<SameRidePage> {
                     Row(
                       children: <Widget>[
                         Text(
-                          '${list[index]?.date}',
+                          '${list[index].date}',
                           style: TextStyle(color: Colors.white54, fontSize: 15),
                         ),
                         Gaps.hGap40,
                         Expanded(
                           child: Text(
-                            '${list[index]?.who}',
+                            '${list[index].who}',
                             style:
                                 TextStyle(color: Colors.white54, fontSize: 15),
                             overflow: TextOverflow.ellipsis,

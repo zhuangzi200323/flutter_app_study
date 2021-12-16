@@ -241,7 +241,7 @@ class _MinePageState extends State<MinePage> {
 
     showLoadingDialog(context, '上传中...');
     isShowLoading = true;
-    uploadImage(croppedFile!.path);
+    uploadImage(croppedFile.path);
   }
 
   void uploadImage(String path) async {

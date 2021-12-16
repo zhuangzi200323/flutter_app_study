@@ -244,7 +244,7 @@ class _BookReaderPageState extends State<BookReaderPage> {
                                           totalChapter: snapshot.totalChapter,
                                           chapterLink: snapshot
                                               .chapters[snapshot.chapterIndex]
-                                              ?.link);
+                                              .link);
 
                                       snapshot.insertOrReplaceToDB(
                                           context, _book);

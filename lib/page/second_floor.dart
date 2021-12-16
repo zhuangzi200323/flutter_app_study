@@ -24,8 +24,8 @@ class _SecondFloorDemoState extends State<SecondFloorDemo> {
 
   @override
   void dispose() {
-    _linkNotifier?.dispose();
-    _secondFloorOpen?.dispose();
+    _linkNotifier.dispose();
+    _secondFloorOpen.dispose();
     super.dispose();
   }
 

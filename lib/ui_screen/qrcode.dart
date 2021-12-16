@@ -1,8 +1,8 @@
-import 'package:barcode_scan/barcode_scan.dart';
+// import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/res/styles.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:barcode_flutter/barcode_flutter.dart';
+// import 'package:barcode_flutter/barcode_flutter.dart';
 
 class QRCodePage extends StatefulWidget {
   QRCodePage({Key? key}) : super(key: key);
@@ -94,21 +94,22 @@ class _QRCodePageState extends State<QRCodePage> {
                     //BarCode
                     Padding(
                         padding: const EdgeInsets.only(bottom: 8.0),
-                        child: Opacity(
-                            opacity: 0.5,
-                            child: BarCodeImage(
-                                foregroundColor:
-                                    Color.fromARGB(255, 80, 93, 124),
-                                params: Code128BarCodeParams("2690123456789",
-                                    withText: true,
-                                    lineWidth: 1.4,
-                                    barHeight: 70.0),
-                                padding: EdgeInsets.all(10.0),
-                                // Render with text label or not (default: false)
-                                onError: (error) {
-                                  // Error handler
-                                  debugPrint('error = $error');
-                                })))
+                        // child: Opacity(
+                        //     opacity: 0.5,
+                        //     child: BarCodeImage(
+                        //         foregroundColor:
+                        //             Color.fromARGB(255, 80, 93, 124),
+                        //         params: Code128BarCodeParams("2690123456789",
+                        //             withText: true,
+                        //             lineWidth: 1.4,
+                        //             barHeight: 70.0),
+                        //         padding: EdgeInsets.all(10.0),
+                        //         // Render with text label or not (default: false)
+                        //         onError: (error) {
+                        //           // Error handler
+                        //           debugPrint('error = $error');
+                        //         }))
+                    )
                   ]))),
           //Bottom text
           Padding(
@@ -132,9 +133,9 @@ class _QRCodePageState extends State<QRCodePage> {
 
   Future _scanQR() async {
     try {
-      qrResult = await BarcodeScanner.scan();
-      debugPrint("==================$qrResult");
-      setState(() {});
+      // qrResult = await BarcodeScanner.scan();
+      // debugPrint("==================$qrResult");
+      // setState(() {});
     } catch (ex) {
       debugPrint(ex.toString());
     }

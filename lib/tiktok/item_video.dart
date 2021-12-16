@@ -51,7 +51,7 @@ class _ItemVideoState extends State<ItemVideo> {
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 

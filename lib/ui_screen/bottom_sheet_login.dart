@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/generated/l10n.dart';
-import 'package:rounded_letter/rounded_letter.dart';
-import 'package:rounded_letter/shape_type.dart';
+// import 'package:rounded_letter/rounded_letter.dart';
+// import 'package:rounded_letter/shape_type.dart';
 
 import '../page_index.dart';
 
@@ -81,18 +81,18 @@ class _BottomSheetLoginPagePageState extends State<BottomSheetLoginPage> {
                 children: <Widget>[
                   Container(
                     height: 140,
-                    child: RoundedLetter(
-                      text: "${S.of(context).login}",
-                      shapeColor: Colors.blue,
-                      shapeType: ShapeType.circle,
-                      borderColor: Colors.blueAccent,
-                      borderWidth: 1,
-                      shapeSize: 130,
-                      fontSize: 48,
-                      fontBold: true,
-                      key: Key("clickable_circle"),
-                      clickListener: SampleClickListener(),
-                    ),
+                    // child: RoundedLetter(
+                    //   text: "${S.of(context).login}",
+                    //   shapeColor: Colors.blue,
+                    //   shapeType: ShapeType.circle,
+                    //   borderColor: Colors.blueAccent,
+                    //   borderWidth: 1,
+                    //   shapeSize: 130,
+                    //   fontSize: 48,
+                    //   fontBold: true,
+                    //   key: Key("clickable_circle"),
+                    //   clickListener: SampleClickListener(),
+                    // ),
                   ),
                   Gaps.vGap60,
                   CTextField(
@@ -130,18 +130,18 @@ class _BottomSheetLoginPagePageState extends State<BottomSheetLoginPage> {
         child: Column(children: <Widget>[
           Container(
             height: 140,
-            child: RoundedLetter(
-              text: "${S.of(context).register}",
-              shapeColor: Color(0xFFF4511E),
-              shapeType: ShapeType.circle,
-              borderColor: Color(0xFFBF360C),
-              borderWidth: 1,
-              shapeSize: 130,
-              fontSize: 48,
-              fontBold: true,
-              key: Key("clickable_circle"),
-              clickListener: SampleClickListener(),
-            ),
+            // child: RoundedLetter(
+            //   text: "${S.of(context).register}",
+            //   shapeColor: Color(0xFFF4511E),
+            //   shapeType: ShapeType.circle,
+            //   borderColor: Color(0xFFBF360C),
+            //   borderWidth: 1,
+            //   shapeSize: 130,
+            //   fontSize: 48,
+            //   fontBold: true,
+            //   key: Key("clickable_circle"),
+            //   clickListener: SampleClickListener(),
+            // ),
           ),
           Gaps.vGap40,
           CTextField(

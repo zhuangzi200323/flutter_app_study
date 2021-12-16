@@ -22,7 +22,7 @@ class DetailsAppBarView extends StatelessWidget {
               iconTheme: IconThemeData(color: Colors.white),
               brightness: snapshot.brightness,
               backgroundColor: Color(0xFA303030),
-              title: Text('${title ?? ""}',
+              title: Text('${title}',
                   maxLines: 1, style: TextStyle(color: Colors.white))),
           height: snapshot.appBarHeight,
           duration: Duration(milliseconds: 100));

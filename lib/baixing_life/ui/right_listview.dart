@@ -41,7 +41,7 @@ class RightListViewState extends State<RightListView>
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 

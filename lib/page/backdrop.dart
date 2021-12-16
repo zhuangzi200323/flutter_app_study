@@ -41,7 +41,7 @@ class _BackDropPageState extends State<BackDropPage>
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 

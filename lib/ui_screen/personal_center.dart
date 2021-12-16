@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/page_index.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 class PersonalCenterPage extends StatefulWidget {
   PersonalCenterPage({Key? key}) : super(key: key);
@@ -38,28 +38,28 @@ class _PersonalCenterPageState extends State<PersonalCenterPage> {
         children: <Widget>[
           Container(
             height: bannerHeight,
-            child: Swiper(
-              itemCount: 4,
-              autoplay: true,
-              itemBuilder: (_, index) => ImageLoadView(bannerImages[index]),
-              pagination: SwiperCustomPagination(
-                builder: (BuildContext context, SwiperPluginConfig config) =>
-                    Container(
-                        alignment: Alignment.bottomRight,
-                        child: Container(
-                            margin: EdgeInsets.only(bottom: 25, right: padding),
-                            padding:
-                                EdgeInsets.symmetric(
-                                    horizontal: padding, vertical: 5),
-                            decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
-                                color: Color(0xAA423B5F)),
-                            child: Text('${(config.activeIndex + 1)}/4',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 13)))),
-              ),
-            ),
+            // child: Swiper(
+            //   itemCount: 4,
+            //   autoplay: true,
+            //   itemBuilder: (_, index) => ImageLoadView(bannerImages[index]),
+            //   pagination: SwiperCustomPagination(
+            //     builder: (BuildContext context, SwiperPluginConfig config) =>
+            //         Container(
+            //             alignment: Alignment.bottomRight,
+            //             child: Container(
+            //                 margin: EdgeInsets.only(bottom: 25, right: padding),
+            //                 padding:
+            //                     EdgeInsets.symmetric(
+            //                         horizontal: padding, vertical: 5),
+            //                 decoration: BoxDecoration(
+            //                     borderRadius:
+            //                         BorderRadius.all(Radius.circular(20)),
+            //                     color: Color(0xAA423B5F)),
+            //                 child: Text('${(config.activeIndex + 1)}/4',
+            //                     style: TextStyle(
+            //                         color: Colors.white, fontSize: 13)))),
+            //   ),
+            // ),
           ),
           Container(
             padding: EdgeInsets.only(top: radius + padding + 15),

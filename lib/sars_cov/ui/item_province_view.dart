@@ -41,7 +41,7 @@ class _ItemProvinceDataViewState extends State<ItemProvinceDataView> {
                       ),
                       Expanded(
                         child: Container(
-                          child: Text('${widget.province?.provinceShortName}'),
+                          child: Text('${widget.province.provinceShortName}'),
                           alignment: Alignment.center,
                         ),
                       ),
@@ -52,28 +52,28 @@ class _ItemProvinceDataViewState extends State<ItemProvinceDataView> {
               Expanded(
                 flex: 6,
                 child: Container(
-                  child: Text('${widget.province?.currentConfirmedCount}'),
+                  child: Text('${widget.province.currentConfirmedCount}'),
                   alignment: Alignment.center,
                 ),
               ),
               Expanded(
                 flex: 6,
                 child: Container(
-                  child: Text('${widget.province?.confirmedCount}'),
+                  child: Text('${widget.province.confirmedCount}'),
                   alignment: Alignment.center,
                 ),
               ),
               Expanded(
                 flex: 5,
                 child: Container(
-                  child: Text('${widget.province?.deadCount}'),
+                  child: Text('${widget.province.deadCount}'),
                   alignment: Alignment.center,
                 ),
               ),
               Expanded(
                 flex: 5,
                 child: Container(
-                  child: Text('${widget.province?.curedCount}'),
+                  child: Text('${widget.province.curedCount}'),
                   alignment: Alignment.center,
                 ),
               ),

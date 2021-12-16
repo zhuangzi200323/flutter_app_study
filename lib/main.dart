@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:amap_core_fluttify/amap_core_fluttify.dart';
+// import 'package:amap_core_fluttify/amap_core_fluttify.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,11 +13,11 @@ import 'page_index.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setCustomErrorPage();
-  _setTargetPlatformForDesktop();
+  //_setTargetPlatformForDesktop();
 
   await SpUtil.getInstance();
 
-  await AmapCore.init(Config.AMAP_KEY_IOS);
+  // await AmapCore.init(Config.AMAP_KEY_IOS);
 
   runZonedGuarded(() {
     //强制横屏
@@ -46,7 +46,9 @@ void main() async {
 void setCustomErrorPage() {
   ErrorWidget.builder = (FlutterErrorDetails flutterErrorDetails) {
     debugPrint(flutterErrorDetails.toString());
-    return Center(child: Text("${flutterErrorDetails.toString()}"));
+    return Scaffold(
+      body: Center(child: Text("${flutterErrorDetails.toString()}")),
+    );
   };
 }
 

@@ -197,7 +197,7 @@ class DessertDataSource extends DataTableSource {
         if (dessert.selected != value) {
           _selectedCount += value! ? 1 : -1;
           assert(_selectedCount >= 0);
-          dessert.selected = value!;
+          dessert.selected = value;
           notifyListeners();
         }
       },

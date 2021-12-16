@@ -60,7 +60,7 @@ class _ItemRankingMovieState extends State<ItemRankingMovie>
       desc += '$date上映';
     }).toList();
 
-    desc += "\n${widget.movie?.durations?.first ?? ''}";
+    desc += "\n${widget.movie.durations?.first ?? ''}";
 
     return BouncingView(
         child: Card(

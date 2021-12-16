@@ -35,7 +35,7 @@ class _ProgressButtonState extends State<ProgressButton>
   late Animation<BorderRadius?> _borderAnimation;
   late Animation<double> _widthAnimation;
 
-  double get buttonWidth => _widthAnimation.value ?? 0;
+  double get buttonWidth => _widthAnimation.value;
 
   BorderRadius get borderRadius =>
       _borderAnimation.value ?? BorderRadius.circular(12);
@@ -154,7 +154,7 @@ class _ProgressButtonState extends State<ProgressButton>
             padding: EdgeInsets.all(8),
             child: CircularProgressIndicator(
               valueColor:
-                  AlwaysStoppedAnimation<Color>(progressColor ?? Colors.white),
+                  AlwaysStoppedAnimation<Color>(progressColor),
               strokeWidth: 3,
             ),
           ));

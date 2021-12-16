@@ -29,7 +29,7 @@ class SelectTextItem extends StatelessWidget {
   final IconData? trailing;
   final String subTitle;
   final double height;
-  final EdgeInsetsGeometry margin;
+  final EdgeInsetsGeometry? margin;
   final Color? bgColor;
   final TextStyle? textStyle;
 
@@ -55,7 +55,7 @@ class SelectTextItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Text('${title ?? ""}',
+                      Text('${title}',
                           style: textStyle ?? TextStyles.textDark14,
                           maxLines: 1),
                       Offstage(
@@ -68,7 +68,7 @@ class SelectTextItem extends StatelessWidget {
                 Expanded(
                     child: Padding(
                         padding: const EdgeInsets.only(right: 8.0, left: 8.0),
-                        child: Text("${content ?? ''}",
+                        child: Text("${content}",
                             maxLines: 1,
                             textAlign: textAlign,
                             overflow: TextOverflow.ellipsis,

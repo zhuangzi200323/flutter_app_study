@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/store/index.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 import '../../page_index.dart';
@@ -147,14 +147,16 @@ class _DetailsPageState extends State<DetailsPage> with TickerProviderStateMixin
               })
         ],
         flexibleSpace: FlexibleSpaceBar(
-            background: Swiper(
-                pagination: SwiperPagination(builder: SwiperPagination.fraction, alignment: Alignment.bottomRight),
-                autoplay: pics.length > 1,
-                itemCount: pics.length,
-                itemBuilder: (BuildContext context, int index) => Hero(
-                    tag: widget.id,
-                    child: ImageLoadView('${pics[index].toString()}',
-                        fit: BoxFit.fill, height: headerHeight, width: Utils.width)))));
+            // background: Swiper(
+            //     pagination: SwiperPagination(builder: SwiperPagination.fraction, alignment: Alignment.bottomRight),
+            //     autoplay: pics.length > 1,
+            //     itemCount: pics.length,
+            //     itemBuilder: (BuildContext context, int index) => Hero(
+            //         tag: widget.id,
+            //         child: ImageLoadView('${pics[index].toString()}',
+            //             fit: BoxFit.fill, height: headerHeight, width: Utils.width)))
+        )
+    );
   }
 
   Widget _buildInfoView(Goods goodInfo) {
@@ -210,7 +212,7 @@ class _DetailsPageState extends State<DetailsPage> with TickerProviderStateMixin
         ..add(adWidget);
     }
     if (currentIndex == 1) {
-      if (goods!.goodComments!.isNotEmpty!) {
+      if (goods!.goodComments!.isNotEmpty) {
         goods!.goodComments!.forEach((comment) {
           children.add(Container(
               child: Column(children: <Widget>[

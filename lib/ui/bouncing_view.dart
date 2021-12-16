@@ -47,7 +47,7 @@ class _BouncingViewState extends State<BouncingView>
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 

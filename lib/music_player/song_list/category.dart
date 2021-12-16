@@ -54,7 +54,7 @@ class _SongListCategoryState extends State<SongListCategoryPage> {
         .readDataFromAssets("assets/data/", "songlist_category.json")
         .then((data) {
       category = []
-        ..addAll((json.decode(data) as List ?? [])
+        ..addAll((json.decode(data) as List)
             .map((o) => MusicCategory.fromMap(o)!));
       setState(() {
         state = LoaderState.Succeed;

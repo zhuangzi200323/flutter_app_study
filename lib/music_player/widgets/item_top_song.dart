@@ -60,7 +60,7 @@ class ItemTopSongView extends StatelessWidget {
                 width: 35,
               ),
               ImageLoadView(
-                '${item?.albumArtUrl}',
+                '${item.albumArtUrl}',
                 width: 60,
                 height: 60,
               ),
@@ -70,14 +70,14 @@ class ItemTopSongView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '${item?.title}',
+                      '${item.title}',
                       style: TextStyles.textBoldWhile16,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
                     Gaps.vGap5,
                     Text(
-                      '${item?.artists}',
+                      '${item.artists}',
                       style: TextStyles.textWhite14,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,

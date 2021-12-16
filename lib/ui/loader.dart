@@ -64,8 +64,8 @@ class _ClassicalErrorView extends StatelessWidget {
       : super();
 
   final Function() onReload;
-  final String reloadText;
-  final String errorTip;
+  final String? reloadText;
+  final String? errorTip;
 
   @override
   Widget build(BuildContext context) => Center(
@@ -89,7 +89,7 @@ class _ClassicalErrorView extends StatelessWidget {
 }
 
 class _ClassicalNoDataView extends StatelessWidget {
-  final String emptyTip;
+  final String? emptyTip;
 
   _ClassicalNoDataView({this.emptyTip = ""}) : super();
 

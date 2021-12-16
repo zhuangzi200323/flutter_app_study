@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/bean/sars_cov.dart';
 import 'package:flutter_app/page_index.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import 'widget/lore.dart';
 import 'widget/map.dart';
@@ -123,42 +123,42 @@ class _SARSCoVIndexPageState extends State<SARSCoVIndexPage> {
                           color: Colors.white),
                       margin: EdgeInsets.all(10.0),
                       padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Swiper(
-                        autoplay: true,
-                        scrollDirection: Axis.vertical,
-                        itemCount: data?.marquee?.length,
-                        itemBuilder: (_, index) {
-                          return Container(
-                            alignment: Alignment.centerLeft,
-                            width: double.infinity,
-                            height: double.infinity,
-                            child: Row(
-                              children: <Widget>[
-                                Container(
-                                  child: Text(
-                                      '${data?.marquee![index].marqueeLabel}',
-                                      style:
-                                          TextStyle(color: Color(0xFFEA4D36))),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFFFCEFED),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 5, vertical: 3),
-                                ),
-                                Gaps.hGap10,
-                                Expanded(
-                                    child: Text(
-                                  '${data?.marquee![index].marqueeContent}',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                )),
-                                Icon(Icons.keyboard_arrow_right)
-                              ],
-                            ),
-                          );
-                        },
-                      ),
+                      // child: Swiper(
+                      //   autoplay: true,
+                      //   scrollDirection: Axis.vertical,
+                      //   itemCount: data?.marquee?.length,
+                      //   itemBuilder: (_, index) {
+                      //     return Container(
+                      //       alignment: Alignment.centerLeft,
+                      //       width: double.infinity,
+                      //       height: double.infinity,
+                      //       child: Row(
+                      //         children: <Widget>[
+                      //           Container(
+                      //             child: Text(
+                      //                 '${data?.marquee![index].marqueeLabel}',
+                      //                 style:
+                      //                     TextStyle(color: Color(0xFFEA4D36))),
+                      //             decoration: BoxDecoration(
+                      //               color: Color(0xFFFCEFED),
+                      //               borderRadius: BorderRadius.circular(5),
+                      //             ),
+                      //             padding: EdgeInsets.symmetric(
+                      //                 horizontal: 5, vertical: 3),
+                      //           ),
+                      //           Gaps.hGap10,
+                      //           Expanded(
+                      //               child: Text(
+                      //             '${data?.marquee![index].marqueeContent}',
+                      //             maxLines: 1,
+                      //             overflow: TextOverflow.ellipsis,
+                      //           )),
+                      //           Icon(Icons.keyboard_arrow_right)
+                      //         ],
+                      //       ),
+                      //     );
+                      //   },
+                      // ),
                     ),
                     HomeHeadView(data: data),
                     CardWidget(),

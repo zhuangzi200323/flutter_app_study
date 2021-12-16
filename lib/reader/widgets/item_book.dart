@@ -38,7 +38,7 @@ class ItemBook extends StatelessWidget {
                               Widget>[
                             Icon(Icons.person, size: 13, color: Colors.grey),
                             Gaps.hGap5,
-                            Text('${book?.author}',
+                            Text('${book.author}',
                                 style:
                                     TextStyle(color: grey9Color, fontSize: 14))
                           ]),

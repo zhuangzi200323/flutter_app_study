@@ -58,7 +58,7 @@ class _AnalyzePageState extends State<AnalyzePage> {
   void dispose() {
     super.dispose();
 
-    controller?.dispose();
+    controller.dispose();
   }
 
   @override
@@ -149,7 +149,7 @@ class _AnalyzePageState extends State<AnalyzePage> {
                       itemBuilder: (BuildContext context, int index) =>
                           ListTile(
                         title: Text(
-                          '${list[index]?.pubTime}',
+                          '${list[index].pubTime}',
                           style: TextStyle(
                               color: curIndex == index
                                   ? Colors.red

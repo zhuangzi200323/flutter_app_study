@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/youdao/index.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+// import 'package:flutter_swiper/flutter_swiper.dart';
 
 import '../page_index.dart';
 import 'provider_widget.dart';
@@ -48,16 +48,18 @@ class _TextPageState extends State<TextPage> {
                   children: <Widget>[
                     AspectRatio(
                         aspectRatio: 118 / 36,
-                        child: Swiper(
-                            itemBuilder: (context, index) =>
-                                ImageLoadView(model.banners![index].img!),
-                            itemCount: model.banners!.length,
-                            autoplay: true,
-                            onTap: (index) => pushNewPage(
-                                context,
-                                WebViewPage(
-                                    url: model.banners![index].url!,
-                                    title: '${model.banners![index].title}')))),
+                        child: Container()
+                        // child: Swiper(
+                        //     itemBuilder: (context, index) =>
+                        //         ImageLoadView(model.banners![index].img!),
+                        //     itemCount: model.banners!.length,
+                        //     autoplay: true,
+                        //     onTap: (index) => pushNewPage(
+                        //         context,
+                        //         WebViewPage(
+                        //             url: model.banners![index].url!,
+                        //             title: '${model.banners![index].title}')))
+                    ),
                     Gaps.vGap3,
                     SectionView('热门课程',
                         hiddenMore: true,

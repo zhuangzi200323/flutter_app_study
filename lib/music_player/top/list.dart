@@ -88,7 +88,7 @@ class _RankListPageState extends State<RankListPage> {
         .readDataFromAssets("assets/data/", "top_category.json")
         .then((data) {
       tops = []
-        ..addAll((json.decode(data) as List ?? [])
+        ..addAll((json.decode(data) as List)
             .map((o) => MusicCategory.fromMap(o)!));
       setState(() {
         state = LoaderState.Succeed;

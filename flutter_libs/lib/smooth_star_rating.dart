@@ -20,7 +20,7 @@ class SmoothStarRating extends StatelessWidget {
       this.onRatingChanged,
       this.color,
       this.borderColor,
-      this.size = 0.0,
+      this.size = 25.0,
       this.spacing = 0.0,
       this.allowHalfRating = true})
       : assert(rating != null),
@@ -31,14 +31,14 @@ class SmoothStarRating extends StatelessWidget {
     if (index >= rating) {
       icon = Icon(Icons.star_border,
           color: borderColor ?? Theme.of(context).primaryColor,
-          size: size ?? 25.0);
+          size: size);
     } else if (index > rating - (allowHalfRating ? 0.5 : 1.0) &&
         index < rating) {
       icon = Icon(Icons.star_half,
-          color: color ?? Theme.of(context).primaryColor, size: size ?? 25.0);
+          color: color ?? Theme.of(context).primaryColor, size: size);
     } else {
       icon = Icon(Icons.star,
-          color: color ?? Theme.of(context).primaryColor, size: size ?? 25.0);
+          color: color ?? Theme.of(context).primaryColor, size: size);
     }
 
     return GestureDetector(

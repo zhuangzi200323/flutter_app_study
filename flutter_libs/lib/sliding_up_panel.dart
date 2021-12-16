@@ -158,7 +158,7 @@ class SlidingUpPanel extends StatefulWidget {
       this.collapsed,
       this.minHeight = 100.0,
       this.maxHeight = 500.0,
-      this.snapPoint = 0.0,
+      this.snapPoint = 3.0,
       this.border,
       this.borderRadius,
       this.boxShadow = const <BoxShadow>[
@@ -503,7 +503,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
     // get minimum distances to figure out where the panel is at
     double d2Close = _ac.value;
     double d2Open = 1 - _ac.value;
-    double d2Snap = ((widget.snapPoint ?? 3) - _ac.value)
+    double d2Snap = ((widget.snapPoint) - _ac.value)
         .abs(); // large value if null results in not every being the min
     double minDistance = min(d2Close, min(d2Snap, d2Open));
 

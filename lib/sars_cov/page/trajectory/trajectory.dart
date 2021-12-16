@@ -62,7 +62,7 @@ class _TrajectoryPageState extends State<TrajectoryPage> {
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 

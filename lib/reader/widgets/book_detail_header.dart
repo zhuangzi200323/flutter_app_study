@@ -29,7 +29,7 @@ class BookDetailsHeaderView extends StatelessWidget {
           Row(crossAxisAlignment: CrossAxisAlignment.start, children: <Widget>[
             Padding(
                 padding: EdgeInsets.all(15),
-                child: ImageLoadView('${book?.cover}',
+                child: ImageLoadView('${book.cover}',
                     height: 99, width: 77, fit: BoxFit.cover)),
             Gaps.hGap5,
             Expanded(
@@ -39,7 +39,7 @@ class BookDetailsHeaderView extends StatelessWidget {
                     Gaps.vGap15,
                     Row(children: <Widget>[
                       Text(
-                        '${book?.title}',
+                        '${book.title}',
                         style: TextStyles.textWhite16,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -63,7 +63,7 @@ class BookDetailsHeaderView extends StatelessWidget {
                             Icon(Icons.person,
                                 size: 16, color: readerMainColor),
                             Text(
-                              '${book?.author ?? ""}',
+                              '${book.author ?? ""}',
                               style: TextStyles.textReader16,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
@@ -74,11 +74,11 @@ class BookDetailsHeaderView extends StatelessWidget {
                               width: 1,
                               color: Colors.white,
                               height: 10),
-                          Text('${book?.cat ?? ""}',
+                          Text('${book.cat ?? ""}',
                               style: TextStyles.textWhite14)
                         ]),
                     Gaps.vGap10,
-                    Text('${book?.wordCount ?? ""}',
+                    Text('${book.wordCount ?? ""}',
                         style: TextStyles.textWhite12)
                   ]),
             )
@@ -106,20 +106,20 @@ class BookDetailsHeaderView extends StatelessWidget {
                             borderColor: Colors.grey)
                       ]),
                       Gaps.vGap10,
-                      Text('${book?.rating?.count}人评分',
+                      Text('${book.rating?.count}人评分',
                           style: TextStyles.textWhite14)
                     ]),
                 Column(children: <Widget>[
                   Text(
-                      book?.retentionRatio == 0
+                      book.retentionRatio == 0
                           ? "暂无统计"
-                          : '${book?.retentionRatio}%',
+                          : '${book.retentionRatio}%',
                       style: TextStyle(fontSize: 22.0, color: Colors.white)),
                   Gaps.vGap10,
                   Text('读者留存', style: TextStyles.textWhite14)
                 ]),
                 Column(children: <Widget>[
-                  Text('${book?.latelyFollower}',
+                  Text('${book.latelyFollower}',
                       style: TextStyle(fontSize: 22.0, color: Colors.white)),
                   Gaps.vGap10,
                   Text('7日人气', style: TextStyles.textWhite14)

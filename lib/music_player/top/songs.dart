@@ -95,7 +95,7 @@ class _TopSongsPageState extends State<TopSongsPage> {
                         background: AspectRatio(
                           aspectRatio: 0.6,
                           child: ImageLoadView(
-                            '${bean?.coverUrl}',
+                            '${bean.coverUrl}',
                             fit: BoxFit.cover,
                             filterColor: Colors.white,
                             opacity: 0.4,
@@ -106,7 +106,7 @@ class _TopSongsPageState extends State<TopSongsPage> {
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
                                       children: [
-                                        TextSpan(text: '${bean?.update}更新', style: TextStyles.textDark16),
+                                        TextSpan(text: '${bean.update}更新', style: TextStyles.textDark16),
                                         TextSpan(text: '  |  ', style: TextStyles.textDark14),
                                         TextSpan(
                                           text: '详情',
@@ -125,7 +125,7 @@ class _TopSongsPageState extends State<TopSongsPage> {
                         ),
                       ),
                       title: Text(
-                        '${bean?.label}',
+                        '${bean.label}',
                         style: TextStyle(
                           color: Color.fromRGBO(0, 0, 0, navAlpha),
                         ),
@@ -197,9 +197,9 @@ class _TopSongsPageState extends State<TopSongsPage> {
             children: [
               AspectRatio(
                 aspectRatio: 1.6,
-                child: ImageLoadView('${bean?.coverUrl}'),
+                child: ImageLoadView('${bean.coverUrl}'),
               ),
-              HtmlWidget('${bean?.desc}', textStyle: TextStyle(fontSize: 20)),
+              HtmlWidget('${bean.desc}', textStyle: TextStyle(fontSize: 20)),
             ],
           ),
         ),

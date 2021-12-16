@@ -61,7 +61,7 @@ class AreaDataView extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        '${data?.conTotal}',
+                        '${data.conTotal}',
                         style:
                             TextStyle(color: Color(0xFF4E79F3), fontSize: 15),
                       ),
@@ -82,7 +82,7 @@ class AreaDataView extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        '${data?.deathTotal}',
+                        '${data.deathTotal}',
                         style:
                             TextStyle(color: Color(0xFF4E79F3), fontSize: 15),
                       ),
@@ -103,7 +103,7 @@ class AreaDataView extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        '${data?.cureTotal}',
+                        '${data.cureTotal}',
                         style:
                             TextStyle(color: Color(0xFF4E79F3), fontSize: 15),
                       ),
@@ -127,7 +127,7 @@ class AreaDataView extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             color: Colors.white,
             child: Text(
-              '${data?.province}疫情地图',
+              '${data.province}疫情地图',
               style: TextStyle(color: Color(0xFF4E79F3)),
             ),
           ),
@@ -143,7 +143,7 @@ class AreaDataView extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             color: Colors.white,
             child: Text(
-              '${data?.province}疫情趋势图',
+              '${data.province}疫情趋势图',
               style: TextStyle(color: Color(0xFF4E79F3)),
             ),
           ),

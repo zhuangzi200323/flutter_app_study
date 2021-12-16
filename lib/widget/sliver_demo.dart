@@ -46,9 +46,9 @@ class _SliverDemoState extends State<SliverDemo> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    _controller?.dispose();
-    _scrollController?.dispose();
-    _tabController?.dispose();
+    _controller.dispose();
+    _scrollController.dispose();
+    _tabController.dispose();
     super.dispose();
   }
 

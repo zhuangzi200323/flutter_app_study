@@ -9,7 +9,7 @@ class SectionView extends StatelessWidget {
   final String more;
   final bool hiddenMore;
   final Color textColor;
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
   final Widget child;
 
   SectionView(

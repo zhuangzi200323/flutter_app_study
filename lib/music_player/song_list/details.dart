@@ -163,7 +163,7 @@ class _SongListDetailsPageState extends State<SongListDetailsPage> {
                                           text: '播放全部',
                                           style: TextStyles.textDark16),
                                       TextSpan(
-                                          text: '（共${list?.length}首）',
+                                          text: '（共${list.length}首）',
                                           style: TextStyles.textDark14),
                                     ],
                                   ),

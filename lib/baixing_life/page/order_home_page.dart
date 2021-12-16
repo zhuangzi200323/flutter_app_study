@@ -30,7 +30,7 @@ class _OrderHomePageState extends State<OrderHomePage>
 
   @override
   void dispose() {
-    controller?.dispose();
+    controller.dispose();
     super.dispose();
   }
 

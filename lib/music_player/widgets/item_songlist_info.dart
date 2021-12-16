@@ -52,14 +52,14 @@ class ItemSongListSong extends StatelessWidget {
                   ),
                 ),
               ),
-              ImageLoadView('${item?.albumArtUrl}', width: 60, height: 60),
+              ImageLoadView('${item.albumArtUrl}', width: 60, height: 60),
               Gaps.hGap5,
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '${item?.title}',
+                      '${item.title}',
                       style: isPlaying
                           ? TextStyles.textRed16
                           : TextStyles.textBoldWhile16,
@@ -68,7 +68,7 @@ class ItemSongListSong extends StatelessWidget {
                     ),
                     Gaps.vGap5,
                     Text(
-                      '${item?.artists}',
+                      '${item.artists}',
                       style: isPlaying
                           ? TextStyles.textRed14
                           : TextStyles.textWhite14,
@@ -109,8 +109,8 @@ class ItemSongListSong extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              title: Text('${item?.title}'),
-              subtitle: Text('${item?.artists}'),
+              title: Text('${item.title}'),
+              subtitle: Text('${item.artists}'),
               trailing: IconButton(
                 icon: Icon(Icons.close),
                 onPressed: () {

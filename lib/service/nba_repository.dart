@@ -19,7 +19,7 @@ class NBARepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Schedule.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => Schedule.fromMap(o)!));
     } else {
       return [];
     }
@@ -39,7 +39,7 @@ class NBARepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Schedule.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => Schedule.fromMap(o)!));
     } else {
       return [];
     }
@@ -59,7 +59,7 @@ class NBARepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => Player.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => Player.fromMap(o)!));
     } else {
       return [];
     }
@@ -76,7 +76,7 @@ class NBARepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => RankBase.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => RankBase.fromMap(o)!));
     } else {
       return [];
     }
@@ -134,7 +134,7 @@ class NBARepository {
     if (result!.code == '0') {
       return []
         ..addAll(
-            (result.data as List ?? []).map((o) => SeasonDataStat.fromMap(o)!));
+            (result.data as List).map((o) => SeasonDataStat.fromMap(o)!));
     } else {
       return [];
     }
@@ -195,7 +195,7 @@ class NBARepository {
     if (result!.code == '0') {
       return []
         ..addAll(
-            (result.data as List ?? []).map((o) => SeasonDataStat.fromMap(o)!));
+            (result.data as List).map((o) => SeasonDataStat.fromMap(o)!));
     } else {
       return [];
     }
@@ -216,7 +216,7 @@ class NBARepository {
     if (result!.code == '0') {
       return []
         ..addAll(
-            (result.data as List ?? []).map((o) => SeasonDataStat.fromMap(o)!));
+            (result.data as List).map((o) => SeasonDataStat.fromMap(o)!));
     } else {
       return [];
     }
@@ -240,7 +240,7 @@ class NBARepository {
     if (result!.code == '0') {
       return []
         ..addAll(
-            (result.data as List ?? []).map((o) => PlayerMatch.fromMap(o)!));
+            (result.data as List).map((o) => PlayerMatch.fromMap(o)!));
     } else {
       return [];
     }
@@ -260,7 +260,7 @@ class NBARepository {
 
     if (result!.code == '0') {
       return []
-        ..addAll((result.data as List ?? []).map((o) => NBANews.fromMap(o)!));
+        ..addAll((result.data as List).map((o) => NBANews.fromMap(o)!));
     } else {
       return [];
     }

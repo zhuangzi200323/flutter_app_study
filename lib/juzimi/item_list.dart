@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/bean/juzimi.dart';
-import 'package:parallax_image/parallax_image.dart';
+// import 'package:parallax_image/parallax_image.dart';
 
 import '../page_index.dart';
 import 'tag_list.dart';
@@ -21,40 +21,40 @@ class ItemList extends StatelessWidget {
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                ParallaxImage(
-                  extent: 180.0,
-                  image: NetworkImage(
-                    '${item.image}',
-                  ),
-                  child: Container(
-                    child: Wrap(
-                      spacing: 5,
-                      children: item.tags!
-                          .map((tag) => TagView(
-                                tag: '${tag.tag}',
-                                padding: EdgeInsets.all(5),
-                                bgColor: Utils.strToColor(tag.tag!),
-                                textColor: Colors.white,
-                                onPressed: () => pushNewPage(
-                                    context,
-                                    JuZiMiTagListPage(
-                                      id: tag.id!,
-                                    )),
-                                borderRadius: 30,
-                              ))
-                          .toList(),
-                    ),
-                    alignment: Alignment.bottomLeft,
-                    padding: EdgeInsets.all(5),
-                  ),
-                ),
+                // ParallaxImage(
+                //   extent: 180.0,
+                //   image: NetworkImage(
+                //     '${item.image}',
+                //   ),
+                //   child: Container(
+                //     child: Wrap(
+                //       spacing: 5,
+                //       children: item.tags!
+                //           .map((tag) => TagView(
+                //                 tag: '${tag.tag}',
+                //                 padding: EdgeInsets.all(5),
+                //                 bgColor: Utils.strToColor(tag.tag!),
+                //                 textColor: Colors.white,
+                //                 onPressed: () => pushNewPage(
+                //                     context,
+                //                     JuZiMiTagListPage(
+                //                       id: tag.id!,
+                //                     )),
+                //                 borderRadius: 30,
+                //               ))
+                //           .toList(),
+                //     ),
+                //     alignment: Alignment.bottomLeft,
+                //     padding: EdgeInsets.all(5),
+                //   ),
+                // ),
                 Container(
                   padding: EdgeInsets.all(5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        '${item?.title}',
+                        '${item.title}',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyles.textBoldDark16,
@@ -79,13 +79,13 @@ class ItemList extends StatelessWidget {
                               ),
                               Gaps.hGap5,
                               Text(
-                                '${item?.commentCount}',
+                                '${item.commentCount}',
                                 style: TextStyles.textGrey14,
                               )
                             ],
                           ),
                           Text(
-                            '${item?.time}',
+                            '${item.time}',
                             style: TextStyles.textGrey14,
                           ),
                         ],

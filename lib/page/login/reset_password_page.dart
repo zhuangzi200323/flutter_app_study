@@ -62,9 +62,9 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
 
   @override
   void dispose() {
-    _phoneController?.dispose();
-    _vCodeController?.dispose();
-    _passwordController?.dispose();
+    _phoneController.dispose();
+    _vCodeController.dispose();
+    _passwordController.dispose();
     super.dispose();
   }
 

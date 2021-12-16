@@ -5,7 +5,7 @@ import '../../page_index.dart';
 class ChoiceNoView extends StatelessWidget {
   final int index;
   final int total;
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
 
   ChoiceNoView({
     Key? key,

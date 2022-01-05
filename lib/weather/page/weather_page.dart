@@ -101,8 +101,7 @@ class WeatherPageState extends State<WeatherPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: <Widget>[
-        WeatherBg(
-            width: Utils.width, height: Utils.height, weatherType: weatherType),
+        WeatherBg(width: Utils.width, height: Utils.height, weatherType: weatherType),
         _buildContentView(),
         ToolBar(
             title: GestureDetector(

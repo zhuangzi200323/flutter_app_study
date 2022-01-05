@@ -244,7 +244,8 @@ class Utils {
   /// [enable] true为显示；false为隐藏
   ///
   static void statusBarEnable(bool enable) {
-    SystemChrome.setEnabledSystemUIOverlays(enable ? SystemUiOverlay.values : []);
+    //SystemChrome.setEnabledSystemUIOverlays(enable ? SystemUiOverlay.values : []);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: enable ? SystemUiOverlay.values : []);
   }
 
   /// 是否是空字符串

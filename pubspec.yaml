@@ -94,6 +94,7 @@ dependencies:
 
   # banner xxxxxxxx
   #flutter_swiper: ^1.1.6
+  flutter_swiper_null_safety: ^1.0.2
 
   # 集成图标库
   # FontAwesome 地址：http://www.fontawesome.com.cn/

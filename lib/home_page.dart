@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 
 import 'generated/l10n.dart';
 import 'music_player/widgets/song_player_bar.dart';
@@ -133,28 +134,28 @@ class HomeStatePage extends State<HomePage> {
   List<Widget> _buildListBody(BuildContext context) {
     List<Widget> widgets = [];
 
-    // widgets
-    //   ..add(AspectRatio(
-    //       aspectRatio: 16 / 9,
-    //       child: Swiper(
-    //           itemBuilder: (context, index) => ImageLoadView(bannerImages[index]),
-    //           itemCount: 4,
-    //           pagination: SwiperPagination(builder: SwiperPagination.fraction, alignment: Alignment.bottomRight),
-    //           autoplay: true)))
-    //   ..addAll(ExpandStateBean.expandStateList
-    //       .map((value) => ExpansionTile(
-    //           title: Text('${value.title}'),
-    //           backgroundColor: Theme.of(context).primaryColor.withOpacity(0.025),
-    //           children: value.children!
-    //               .map((child) => ListTile(
-    //                   contentPadding: EdgeInsets.only(left: 30, right: 20),
-    //                   title: Text(child.title),
-    //                   onTap: () => pushNewPage(context, child.page),
-    //                   trailing: Icon(Icons.keyboard_arrow_right)))
-    //               .toList(),
-    //           onExpansionChanged: (bool value) {},
-    //           leading: Icon(value.leading)))
-    //       .toList());
+    widgets
+      ..add(AspectRatio(
+          aspectRatio: 16 / 9,
+          child: Swiper(
+              itemBuilder: (context, index) => ImageLoadView(bannerImages[index]),
+              itemCount: 4,
+              pagination: SwiperPagination(builder: SwiperPagination.fraction, alignment: Alignment.bottomRight),
+              autoplay: true)))
+      ..addAll(ExpandStateBean.expandStateList
+          .map((value) => ExpansionTile(
+              title: Text('${value.title}'),
+              backgroundColor: Theme.of(context).primaryColor.withOpacity(0.025),
+              children: value.children!
+                  .map((child) => ListTile(
+                      contentPadding: EdgeInsets.only(left: 30, right: 20),
+                      title: Text(child.title),
+                      onTap: () => pushNewPage(context, child.page),
+                      trailing: Icon(Icons.keyboard_arrow_right)))
+                  .toList(),
+              onExpansionChanged: (bool value) {},
+              leading: Icon(value.leading)))
+          .toList());
     return widgets;
   }
 

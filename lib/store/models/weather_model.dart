@@ -7,7 +7,7 @@ class WeatherModel extends ChangeNotifier {
 
   List<HeWeather> get citiesWeather => _citiesWeather;
 
-  String _defaultCity = '正在定位...';
+  String _defaultCity = '杭州';
 
   String get defaultCity => _defaultCity;
 

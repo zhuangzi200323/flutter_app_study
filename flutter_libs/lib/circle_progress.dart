@@ -80,7 +80,7 @@ class _CircleProgressWidgetState extends State<CircleProgressWidget>
           widget.progressColor ?? Colors.redAccent,
           widget.ringColor ?? Colors.white54,
           widget.strokeWidth,
-          widget.colors!,
+          widget.colors ?? [Colors.red, Colors.green],
           widget.backgroundColor ?? Colors.transparent,
           widget.totalDegree,
           widget.strokeCapRound),

@@ -67,15 +67,27 @@ class HeWeather {
     weather.now = map['now'] == null ? null : NowWeather.fromMap(map['now']);
     weather.update = map['update'] == null ? null : UpdateBean.fromMap(map['update']);
 
-    weather.dailyForecast = []..addAll((map['daily_forecast'] as List).map((o) => DailyForecast.fromMap(o)));
+    if(map['daily_forecast'] != null) {
+      weather.dailyForecast = []
+        ..addAll((map['daily_forecast'] as List).map((o) =>
+            DailyForecast.fromMap(o)));
+    }
 
-    weather.lifestyle = []..addAll((map['lifestyle'] as List).map((o) => Lifestyle.fromMap(o)));
+    if(map['lifestyle'] != null) {
+      weather.lifestyle = []..addAll((map['lifestyle'] as List).map((o) => Lifestyle.fromMap(o)));
+    }
 
-    weather.hourly = []..addAll((map['hourly'] as List).map((o) => Hourly.fromMap(o)));
+    if(map['hourly'] != null) {
+      weather.hourly = []..addAll((map['hourly'] as List).map((o) => Hourly.fromMap(o)));
+    }
 
-    weather.airNowStation = []..addAll((map['air_now_station'] as List).map((o) => Air.fromMap(o)));
+    if(map['air_now_station'] != null) {
+      weather.airNowStation = []..addAll((map['air_now_station'] as List).map((o) => Air.fromMap(o)));
+    }
 
-    weather.sunriseSunset = []..addAll((map['sunrise_sunset'] as List).map((o) => SunriseSunset.fromMap(o)));
+    if(map['sunrise_sunset'] != null) {
+      weather.sunriseSunset = []..addAll((map['sunrise_sunset'] as List).map((o) => SunriseSunset.fromMap(o)));
+    }
     return weather;
   }
 }

@@ -39,10 +39,10 @@ class SongPlayerBar extends StatelessWidget {
                                     children: <Widget>[
                                   Text('${snapshot.curSong?.title ?? ""}',
                                       maxLines: 1,
-                                      style: TextStyle(fontSize: 16)),
+                                      style: TextStyle(fontSize: 14)),
                                   Text('${snapshot.curSong?.artists ?? ""}',
                                       maxLines: 1,
-                                      style: TextStyle(fontSize: 14))
+                                      style: TextStyle(fontSize: 12))
                                 ])),
                             IconButton(
                                 icon: Icon(snapshot.isPlaying

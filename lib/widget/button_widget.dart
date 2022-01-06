@@ -442,7 +442,7 @@ class ButtonWidgetState extends State<ButtonWidget> {
   }
 
   String dropdown1Value = 'Three';
-  String dropdown2Value = "";
+  String? dropdown2Value;
   String dropdown3Value = 'Four';
 
   Widget buildDropdownButton() {

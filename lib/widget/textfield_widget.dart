@@ -105,8 +105,8 @@ class TextFieldWidgetDemoState extends State<TextFieldWidgetDemo> {
     ];
   }
 
-  Future<bool> _onBackPressed() {
-    return showDialog(
+  Future<bool> _onBackPressed() async{
+    bool res = await showDialog(
       builder: (context) => AlertDialog(
             title: Text('Do you really want to exit the page?'),
             actions: <Widget>[
@@ -121,6 +121,7 @@ class TextFieldWidgetDemoState extends State<TextFieldWidgetDemo> {
             ],
           ),
       context: context,
-     ) as Future<bool>;
+     ) as bool;
+    return res;
   }
 }

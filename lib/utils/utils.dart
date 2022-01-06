@@ -297,7 +297,10 @@ class Utils {
   }
 
   static Future<ByteData> getCustomFont(String path) async {
-    ByteData byteData = await rootBundle.load(path);
+    //ByteData byteData = await rootBundle.load(path); //这样加载不成功，原因不明
+    Future<ByteData> byteData = File(path).readAsBytes().then((value){
+      return value.buffer.asByteData();
+    });
     return byteData;
   }
 

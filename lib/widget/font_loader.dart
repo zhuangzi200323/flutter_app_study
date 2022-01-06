@@ -70,7 +70,9 @@ class _FontLoaderPageState extends State<FontLoaderPage> {
 
   void downloadFont() async {
     String url =
-        'https://raw.githubusercontent.com/google/fonts/master/ofl/montserrat/Montserrat-Light.ttf';
+        'http://d.xiazaiziti.com/en_fonts/fonts/m/Montserrat-Light.ttf';
+        //'https://ghproxy.com/https://github.com/Pushkar2730/Banana-Speak/blob/f0b02775a00f94701b15714f1c609bff45dcd22c/Montserrat/Montserrat-Light.ttf?raw=true';
+        //'https://raw.githubusercontent.com/google/fonts/master/ofl/montserrat/Montserrat-Light.ttf';
 
     await HttpUtils().download(url, fontPath,
         onReceiveProgress: (count, total) {

@@ -9,7 +9,7 @@ class CheckSwitchWidget extends StatefulWidget {
 }
 
 class _CheckSwitchWidgetState extends State<CheckSwitchWidget> {
-  var _isChecked = false;
+  bool? _isChecked;
   var _isTitleChecked = false;
   var _isOn = false;
   var _isTitleOn = false;
@@ -34,7 +34,7 @@ class _CheckSwitchWidgetState extends State<CheckSwitchWidget> {
               // 不设置该方法，处于不可用状态
               onChanged: (checked) {
                 // 管理状态值
-                setState(() => _isChecked = checked!);
+                setState(() => _isChecked = checked);
               },
               // 选中时的颜色
               activeColor: Colors.pink,

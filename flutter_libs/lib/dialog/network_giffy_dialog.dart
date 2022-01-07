@@ -68,11 +68,14 @@ class NetworkGiffyDialog extends StatelessWidget {
                         : MainAxisAlignment.center,
                     children: <Widget>[
                       !onlyOkButton
-                          ? RaisedButton(
-                              color: buttonCancelColor ?? Colors.grey,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(buttonRadius)),
+                          ? ElevatedButton(
+                          style: ButtonStyle(backgroundColor: MaterialStateProperty.all(buttonCancelColor ?? Colors.grey),
+                              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(buttonRadius)))),
+                              // color: buttonCancelColor ?? Colors.grey,
+                              // shape: RoundedRectangleBorder(
+                              //     borderRadius:
+                              //         BorderRadius.circular(buttonRadius)),
                               onPressed: () => Navigator.of(context).pop(),
                               child: buttonCancelText ??
                                   Text(
@@ -80,10 +83,13 @@ class NetworkGiffyDialog extends StatelessWidget {
                                     style: TextStyle(color: Colors.white),
                                   ))
                           : Container(),
-                      RaisedButton(
-                        color: buttonOkColor ?? Colors.green,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(buttonRadius)),
+                      ElevatedButton(
+                        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(buttonOkColor ?? Colors.green),
+                            shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(buttonRadius)))),
+                        // color: buttonOkColor ?? Colors.green,
+                        // shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(buttonRadius)),
                         onPressed: onOkButtonPressed,
                         child: buttonOkText ??
                             Text('OK', style: TextStyle(color: Colors.white)),

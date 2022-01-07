@@ -167,8 +167,8 @@ class _SliverPageState extends State<SliverPage>
             },
             body: TabBarView(
                 controller: controller,
-                children: titleTabs.map((view) {
-                  return BottomGridView(title: titleTabs[currentIndex]);
+                children: titleTabs.map((title) {
+                  return BottomGridView(title: title);
                 }).toList())));
   }
 }

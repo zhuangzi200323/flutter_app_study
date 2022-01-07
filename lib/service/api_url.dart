@@ -80,7 +80,7 @@ class ApiUrl {
   static const String ARTICLE_DAY_URL = "juzimi/article_day";
   static const String ARTICLE_RANDOM_URL = "juzimi/article_random";
 
-  static const String MEIZITU_URL = 'https://m.image.so.com/';
+  static const String MEIZITU_URL = 'https://image.so.com/';
 
   static const String QDAILY_HOME_DATA = "qdaily/home_data";
 

@@ -42,8 +42,8 @@ class DialogWidgetState extends State<DialogWidget> {
               showDialog(
                   context: context,
                   builder: (_) => NetworkGiffyDialog(
-                        image: Image.network(
-                          "https://raw.githubusercontent.com/Shashank02051997/FancyGifDialog-Android/master/GIF's/gif14.gif",
+                        image: ImageLoadView(
+                          "https://ghproxy.com/https://raw.githubusercontent.com/Shashank02051997/FancyGifDialog-Android/master/GIF's/gif14.gif",
                           fit: BoxFit.cover,
                         ),
                         title: Text(
@@ -240,7 +240,7 @@ class DialogWidgetState extends State<DialogWidget> {
                             Expanded(
                                 child: Container(
                                     alignment: Alignment.center,
-                                    margin: EdgeInsets.only(top: 20),
+                                    margin: EdgeInsets.only(top: 0),
                                     child: Text("Hello 自定义Dialog"))),
                             Container(
                                 height: 50,
@@ -301,7 +301,7 @@ class DialogWidgetState extends State<DialogWidget> {
                     // RouteTransitionsBuilder 类型的构建方法，定义了 Dialog 的动画。
                     transitionBuilder: (context, anim1, anim2, child) {
                       return Transform.rotate(
-                          angle: anim1.value * 360,
+                          angle: anim1.value*3.14*2,
                           child: AlertDialog(
                               shape: RoundedRectangleBorder(
                                   borderRadius:
@@ -351,7 +351,7 @@ class DialogWidgetState extends State<DialogWidget> {
                     transitionDuration: Duration(milliseconds: 400),
                     transitionBuilder: (context, anim1, anim2, child) {
                       return Transform.rotate(
-                          angle: anim1.value * 360,
+                          angle: anim1.value * 3.14 * 2,
                           child: Opacity(
                               opacity: anim1.value,
                               child: AlertDialog(

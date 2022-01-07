@@ -51,6 +51,8 @@ class _AppBarWidgetState extends State<AppBarWidget>
             /// 可以用这种方式设置渐变的AppBar
             flexibleSpace: GradualChangeView(
                 rotation: Rotation.LR,
+                width: Utils.width,
+                height: double.infinity,
                 colors: [Colors.cyan, Colors.blue, Colors.blueAccent]),
 
             /// 应用程序栏的工具栏部分是多么不透明。值1.0是完全不透明的，值0.0是完全透明的。
@@ -115,7 +117,7 @@ class _AppBarWidgetState extends State<AppBarWidget>
                   ),
                 ],
                 iconTheme: IconThemeData(color: Colors.black),
-                textTheme: TextTheme(headline6: TextStyle(color: Colors.black))),
+                titleTextStyle: TextStyle(color: Colors.black)),
           ),
 
           /// App bar with the title and subtitle
@@ -160,7 +162,7 @@ class _AppBarWidgetState extends State<AppBarWidget>
                   IconButton(icon: Icon(Icons.search), onPressed: () {})
                 ],
                 iconTheme: IconThemeData(color: Colors.black),
-                textTheme: TextTheme(headline6: TextStyle(color: Colors.black))),
+                titleTextStyle: TextStyle(color: Colors.black)),
           ),
 
           Container(
@@ -171,6 +173,31 @@ class _AppBarWidgetState extends State<AppBarWidget>
                   leading: IconButton(
                       icon: Icon(Icons.chevron_left),
                       onPressed: () => Navigator.of(context).pop()))),
+
+          Container(
+              margin: EdgeInsets.only(bottom: 16.0),
+              child: AppBar(
+                title: Text("Pop menu"),
+                actions: <Widget>[
+                  PopupMenuButton<String>(
+                    onSelected: (String value) {
+                      setState(() {
+                        print("value=${value}");
+                      });
+                    },
+                    itemBuilder: (BuildContext context) => <PopupMenuItem<String>>[
+                      PopupMenuItem<String>(
+                        value: '1',
+                        child: Text('Menu1'),
+                      ),
+                      PopupMenuItem<String>(
+                        value: '2',
+                        child: Text('Menu2'),
+                      ),
+                    ],
+                  )
+                ],
+              )),
         ]));
   }
 }

@@ -25,7 +25,7 @@ class ImageModal {
 
   static List<ImageModal> fromMapList(dynamic mapList) {
     if (mapList == null) return [];
-    List<ImageModal> list = List.empty(growable: true);//List(mapList.length);
+    List<ImageModal> list = List.filled(mapList.length, new ImageModal());//List(mapList.length);
     for (int i = 0; i < mapList.length; i++) {
       list[i] = fromMap(mapList[i]);
     }

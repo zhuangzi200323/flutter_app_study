@@ -183,6 +183,7 @@ class HomeStatePage extends State<HomePage> {
       //   city = SpUtil.getString('current_city', defValue: '北京');
       // }
       // Store.value<WeatherModel>(_scaffoldKey.currentContext!, listen: false).getDefaultCityWeather(city);
+      Store.value<WeatherModel>(_scaffoldKey.currentContext!, listen: false).getDefaultCityWeather('杭州');
     } else {
       ScaffoldMessenger.of(_scaffoldKey.currentContext!).showSnackBar(SnackBar(content: Text('权限不足')));
     }

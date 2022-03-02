@@ -52,6 +52,7 @@ class AppTheme {
     print('getThemeData===================================$color');
     ThemeData themData = ThemeData(
       primaryColor: Color(color == 0 ? Colors.red.value : color),
+      colorScheme: ColorScheme.fromSwatch().copyWith(primary: Color(color == 0 ? Colors.red.value : color)),
       fontFamily: 'Aleo',
     );
     return themData;

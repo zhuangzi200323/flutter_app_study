@@ -33,6 +33,7 @@ class _BuildRowViewState extends State<BuildRowView> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         IconText(
+          height: 70,
           icon: Icon(
             Icons.share,
             color: Colors.grey,
@@ -46,6 +47,7 @@ class _BuildRowViewState extends State<BuildRowView> {
           lineType: LineType.vertical,
         ),
         IconText(
+          height: 70,
           icon: Icon(
             Icons.history,
             color: Colors.grey,
@@ -64,6 +66,7 @@ class _BuildRowViewState extends State<BuildRowView> {
             builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
               isFavorite = snapshot.data!;
               return IconText(
+                height: 70,
                 icon: Icon(
                     snapshot.data! ? Icons.favorite : Icons.favorite_border,
                     color: snapshot.data! ? Colors.redAccent : Colors.grey),

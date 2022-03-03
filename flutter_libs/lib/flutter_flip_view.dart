@@ -31,7 +31,7 @@ class FlipView extends StatefulWidget {
 class FlipViewState extends State<FlipView>
     with SingleTickerProviderStateMixin {
   late Animation<double> _animation;
-  late AnimationStatus _lastStatus;
+  AnimationStatus? _lastStatus;
 
   @override
   void initState() {

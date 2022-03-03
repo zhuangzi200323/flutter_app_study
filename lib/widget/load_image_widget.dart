@@ -12,17 +12,17 @@ class LoadImageWidget extends StatefulWidget {
 }
 
 class LoadImageWidgetState extends State<LoadImageWidget> {
-  Future<PickedFile?>? _imageFile;
+  Future<XFile?>? _imageFile;
   bool isVideo = false;
-  late VideoPlayerController _controller;
+  VideoPlayerController? _controller;
   VoidCallback? listener;
 
   void _onImageButtonPressed(ImageSource source) async {
     if (isVideo) {
       if (_controller != null) {
-        _controller.removeListener(listener!);
+        _controller!.removeListener(listener!);
       }
-      PickedFile? videoFile = await ImagePicker().getVideo(source: source);
+      XFile? videoFile = await ImagePicker().pickVideo(source: source);
       if (videoFile != null && mounted) {
         String videoFilePath = videoFile.path;
 
@@ -46,12 +46,12 @@ class LoadImageWidgetState extends State<LoadImageWidget> {
         _controller = VideoPlayerController.file(File(videoFile.path))
           ..addListener(listener!)
           ..initialize().then((_) {
-            _controller..setLooping(true);
+            _controller!..setLooping(true);
             setState(() {});
           });
       }
     } else {
-      _imageFile = ImagePicker().getImage(source: source);
+      _imageFile = ImagePicker().pickImage(source: source);
     }
 
     setState(() {});
@@ -59,13 +59,13 @@ class LoadImageWidgetState extends State<LoadImageWidget> {
 
   @override
   void deactivate() {
-    _controller.removeListener(listener!);
+    _controller!.removeListener(listener!);
     super.deactivate();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller!.dispose();
     super.dispose();
   }
 
@@ -81,19 +81,19 @@ class LoadImageWidgetState extends State<LoadImageWidget> {
         'You have not yet picked a video',
         textAlign: TextAlign.center,
       );
-    } else if (_controller.value.isInitialized) {
+    } else if (_controller!.value.isInitialized) {
       return Container(
         child: GestureDetector(
           onTap: () {
-            if (_controller.value.isPlaying) {
-              _controller.pause();
+            if (_controller!.value.isPlaying) {
+              _controller!.pause();
             } else {
-              _controller.play();
+              _controller!.play();
             }
           },
           child: AspectRatio(
-            aspectRatio: _controller.value.aspectRatio, // 按照视频比例展示视频
-            child: VideoPlayer(_controller),
+            aspectRatio: _controller!.value.aspectRatio, // 按照视频比例展示视频
+            child: VideoPlayer(_controller!),
           ),
         ),
       );
@@ -106,9 +106,9 @@ class LoadImageWidgetState extends State<LoadImageWidget> {
   }
 
   Widget _previewImage() {
-    return FutureBuilder<PickedFile?>(
+    return FutureBuilder<XFile?>(
         future: _imageFile,
-        builder: (BuildContext context, AsyncSnapshot<PickedFile?> snapshot) {
+        builder: (BuildContext context, AsyncSnapshot<XFile?> snapshot) {
           if (snapshot.connectionState == ConnectionState.done &&
               snapshot.data != null) {
             return Image.file(File(snapshot.data!.path));

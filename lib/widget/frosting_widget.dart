@@ -21,7 +21,8 @@ class _FrostingWidgetState extends State<FrostingWidget> {
           ConstrainedBox(
             constraints: const BoxConstraints.expand(),
             child: Image.network(
-              "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1554280920&di=f596f493385c55a20fe45440e5cb14a6&src=http://pic18.nipic.com/20120205/3145425_101322096000_2.jpg",
+              "https://c-ssl.duitang.com/uploads/item/202004/12/20200412095043_fdcqy.jpg",
+              //"https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1554280920&di=f596f493385c55a20fe45440e5cb14a6&src=http://pic18.nipic.com/20120205/3145425_101322096000_2.jpg",
               fit: BoxFit.cover,
             ),
           ),
@@ -40,7 +41,7 @@ class _FrostingWidgetState extends State<FrostingWidget> {
 
                     ///
                     child: Opacity(
-                      opacity: 0.5,
+                      opacity: 0.4,
                       child: Container(
                         width: 100.0,
                         height: 100.0,
@@ -68,7 +69,7 @@ class _FrostingWidgetState extends State<FrostingWidget> {
                     ),
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 50),
-                      color: Colors.white10,
+                      color: Color.fromRGBO(33, 33, 44, 0.3),
                       padding: EdgeInsets.all(10),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -78,7 +79,7 @@ class _FrostingWidgetState extends State<FrostingWidget> {
                             'BackdropFilter class',
                             style: TextStyle(
                               fontSize: 16,
-                              color: Colors.white,
+                              color: Colors.black,
                             ),
                           ),
                           Padding(
@@ -104,7 +105,7 @@ class _FrostingWidgetState extends State<FrostingWidget> {
                       sigmaY: 10,
                     ),
                     child: Container(
-                      color: Colors.white10,
+                      color: Color.fromRGBO(55, 66, 67, 0.3),
                       padding: EdgeInsets.all(10),
                       child: IconButton(
                         onPressed: () {},

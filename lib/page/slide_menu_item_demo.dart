@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -39,7 +40,9 @@ class _SlideMenuItemDemoPageState extends State<SlideMenuItemDemoPage> {
                           }
                         });
                       },
-                      child: Container(child: Text("${countries[index].name}")),
+                      child: Container(
+                        width: Utils.width,
+                          child: Text("${countries[index].name}")),
                       actions: countries[index].pyFull!.length % 2 == 0
                           ? <ActionsWidget>[
                               ActionsWidget(
@@ -81,6 +84,7 @@ class _SlideMenuItemDemoPageState extends State<SlideMenuItemDemoPage> {
   void getCountryData() async {
     //加载城市列表
     await rootBundle.loadString('assets/data/country.json').then((value) {
+    //await File('assets/data/country.json').readAsString().then((value) {
       countries = []
         ..addAll(
             (json.decode(value) as List).map((o) => Country.fromMap(o)!));

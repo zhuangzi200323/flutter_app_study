@@ -10,48 +10,51 @@ class WavePage extends StatefulWidget {
 }
 
 class _WavePageState extends State<WavePage> {
-  @override
-  Widget build(BuildContext context) {
-    _buildCard(
-        {Config? config,
+  int _blurIndex = 0;
+  MaskFilter? _blur;
+  final List<MaskFilter?> _blurs = [
+    null,
+    MaskFilter.blur(BlurStyle.normal, 10.0),
+    MaskFilter.blur(BlurStyle.inner, 10.0),
+    MaskFilter.blur(BlurStyle.outer, 10.0),
+    MaskFilter.blur(BlurStyle.solid, 16.0)
+  ];
+
+  _buildCard(
+      {Config? config,
         Color backgroundColor = Colors.transparent,
         DecorationImage? backgroundImage,
         double height = 152.0}) {
-      return Container(
-          height: height,
-          width: double.infinity,
-          child: Card(
-              elevation: 12.0,
-              margin: EdgeInsets.only(right: 16.0, left: 16.0, bottom: 16.0),
-              clipBehavior: Clip.antiAlias,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(16.0))),
-              child: WaveWidget(
-                  config: config!,
-                  backgroundColor: backgroundColor,
-                  backgroundImage: backgroundImage,
-                  size: Size(double.infinity, double.infinity),
-                  waveAmplitude: 0)));
+    return Container(
+        height: height,
+        width: double.infinity,
+        child: Card(
+            elevation: 12.0,
+            margin: EdgeInsets.only(right: 16.0, left: 16.0, bottom: 16.0),
+            clipBehavior: Clip.antiAlias,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(16.0))),
+            child: WaveWidget(
+                config: config!,
+                backgroundColor: backgroundColor,
+                backgroundImage: backgroundImage,
+                size: Size(double.infinity, double.infinity),
+                waveAmplitude: 0)));
+  }
+
+  MaskFilter? _nextBlur() {
+    if (_blurIndex == _blurs.length - 1) {
+      _blurIndex = 0;
+    } else {
+      _blurIndex = _blurIndex + 1;
     }
 
-    MaskFilter? _blur = null;
-    final List<MaskFilter?> _blurs = [
-      null,
-      MaskFilter.blur(BlurStyle.normal, 10.0),
-      MaskFilter.blur(BlurStyle.inner, 10.0),
-      MaskFilter.blur(BlurStyle.outer, 10.0),
-      MaskFilter.blur(BlurStyle.solid, 16.0)
-    ];
-    int _blurIndex = 0;
-    MaskFilter _nextBlur() {
-      if (_blurIndex == _blurs.length - 1) {
-        _blurIndex = 0;
-      } else {
-        _blurIndex = _blurIndex + 1;
-      }
-      _blur = _blurs[_blurIndex]!;
-      return _blurs[_blurIndex]!;
-    }
+    _blur = _blurs[_blurIndex];
+    print("_blurIndex = $_blurIndex, _blur = $_blur");
+    return _blurs[_blurIndex];
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Wave Widget'), actions: <Widget>[
           IconButton(

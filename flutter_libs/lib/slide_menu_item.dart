@@ -116,8 +116,8 @@ class SlideMenuItemState extends State<SlideMenuItem>
                   Positioned.fill(
                       child: Row(
                           children: widget.actions!
-                              .map((action) => buildActionButton(action.icon!,
-                                  action.color!, action.onTap!, action.child!))
+                              .map((action) => buildActionButton(action.icon,
+                                  action.color!, action.onTap!, action.child))
                               .toList(),
                           mainAxisAlignment: MainAxisAlignment.end)),
                   Listener(
@@ -161,10 +161,10 @@ class SlideMenuItemState extends State<SlideMenuItem>
                                   child: Row(
                                       children: widget.actions!
                                           .map((action) => buildActionButton(
-                                              action.icon!,
+                                              action.icon,
                                               action.color!,
                                               action.onTap!,
-                                              action.child!))
+                                              action.child))
                                           .toList(),
                                       mainAxisSize: MainAxisSize.min)))
                         ])),
@@ -173,7 +173,7 @@ class SlideMenuItemState extends State<SlideMenuItem>
   }
 
   Widget buildActionButton(
-      Widget icon, Color color, Function onTap, Widget? child) {
+      Widget? icon, Color color, Function onTap, Widget? child) {
     return GestureDetector(
         behavior: HitTestBehavior.translucent,
         onTap: () {

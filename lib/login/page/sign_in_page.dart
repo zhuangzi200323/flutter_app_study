@@ -111,19 +111,19 @@ class _SignInPageState extends State<SignInPage> {
                   child: SubmitButton(
                       title: "${S.of(context).login}",
                       onTap: () {
-                        if (_emailController.text.isEmpty) {
-                          Toast.show(context, "邮箱不能为空");
-                        } else if (!Utils.isEmail(_emailController.text)) {
-                          Toast.show(context, "邮箱格式不正确");
-                        } else if (_pwdController.text.isEmpty) {
-                          Toast.show(context, "密码不能为空");
-                        } else if (_pwdController.text.length < 6) {
-                          Toast.show(context, "密码长度不能小于6位！");
-                        } else {
+                        // if (_emailController.text.isEmpty) {
+                        //   Toast.show(context, "邮箱不能为空");
+                        // } else if (!Utils.isEmail(_emailController.text)) {
+                        //   Toast.show(context, "邮箱格式不正确");
+                        // } else if (_pwdController.text.isEmpty) {
+                        //   Toast.show(context, "密码不能为空");
+                        // } else if (_pwdController.text.length < 6) {
+                        //   Toast.show(context, "密码长度不能小于6位！");
+                        // } else {
                           showLoadingDialog(context, '登录中...');
                           isShowLoading = true;
                           _login();
-                        }
+                        // }
                       }))
             ]));
   }

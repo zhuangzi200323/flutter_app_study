@@ -108,7 +108,7 @@ class DataBean {
     bean.parentId = map['parentId'];
     bean.name = map['name'];
     bean.sortNum = map['sortNum'];
-    bean.parentName = map['parentName'];
+    bean.parentName = map['parentName'] ?? "";
     return bean;
   }
 
